@@ -1,0 +1,31 @@
+#default editor
+setenv  EDITOR  vim
+setenv  VISUAL  vim
+
+#bindkey
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[2~" quoted-insert
+bindkey "\e[3~" delete-char
+bindkey "\e[4~" end-of-line
+bindkey "\e[5C" forward-word
+bindkey "\e[5D" backward-word
+bindkey "^W" backward-delete-word
+bindkey -k up history-search-backward
+bindkey -k down history-search-forward
+
+#tmux color issue& auto attatch
+alias tmux  '\tmux a -2'
+
+#ls
+alias ls    '\ls -GF'
+alias l     'ls -C'
+alias ll    'ls -l'
+alias la    'ls -A'
+alias lal   'ls -lA'
+
+#network tool
+alias p     'ping'
+alias n     'nslookup'
+alias d     'dig'
+alias t     'mtr'
