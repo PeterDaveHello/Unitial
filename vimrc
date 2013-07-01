@@ -30,6 +30,8 @@ set incsearch "is
 set hlsearch "hls
 " case-insensitive search
 set ignorecase "ic
+" smart search (override 'ic' when pattern has uppers)
+set smartcase "scs
 
 " enable backspace in insert mode
 set backspace=2 "bs
