@@ -36,6 +36,9 @@ set smartcase "scs
 " enable backspace in insert mode
 set backspace=2 "bs
 
+" file formats priority when try to read a file
+set fileformats=unix,dos,mac "ffs
+
 " set statusbar
 set statusline+=%*
 set statusline+=%f              "filename
