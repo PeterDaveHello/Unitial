@@ -14,6 +14,11 @@ alias ll='ls -l'
 alias la='ls -A'
 alias lal='ls -lA'
 
+alias c='clear'
+
+alias cd..='\cd ..'
+alias cd...='\cd ../..'
+
 #grep
 alias grep='\grep --color=auto'
 alias fgrep='\fgrep --color=auto'
