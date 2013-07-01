@@ -34,6 +34,27 @@ set ignorecase "ic
 " enable backspace in insert mode
 set backspace=2 "bs
 
+" set statusbar
+set statusline+=%*
+set statusline+=%f              "filename
+set statusline+=%m              "modified flag
+set statusline+=%r              "read only flag
+set statusline+=\ \%y           "filetype
+set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
+set statusline+=%=              "left/right separator
+set statusline+=%*              "show the errors/warning in the status line
+set statusline+=%#warningmsg#
+set statusline+=%*
+set statusline+=%=              "left/right separator
+set statusline+=%h\ \           "help file flag
+set statusline+=%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}
+set statusline+=[%l,%c]         "cursor line,column
+set statusline+=\ \[%L\ lines\] "total lines
+set statusline+=\ [%P]          "percent through file
+
+" display a status line at the bottom of the window
+set laststatus=2
+
 " highlight syntax
 syntax on
 
