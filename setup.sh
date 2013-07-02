@@ -23,6 +23,8 @@ if [ $os = "Linux" ]
 then
     echo "alias ls='\ls -GF --autocolor'" >> ~/.bash_profile
     echo "alias ls    '\ls -GF --autocolor'" >> ~/.tcshrc
+else
+    echo "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bash_profile
 fi
 
 mkdir -p ~/.vim/colors/
