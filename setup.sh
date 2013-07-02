@@ -3,11 +3,11 @@
 os=`uname`
 if [ $os = "Linux" ]
 then
-download='wget -nv'
-download_o='wget -nv -O'
+    download='wget -nv'
+    download_o='wget -nv -O'
 else
-download='fetch'
-download_o='fetch -o'
+    download='fetch'
+    download_o='fetch -o'
 fi
 
 path='https://raw.github.com/PeterDaveHello/Unitial/master/'
@@ -21,8 +21,8 @@ done
 
 if [ $os = "Linux" ]
 then
-echo "alias ls='\ls -GF --autocolor'" >> ~/.bash_profile
-echo "alias ls    '\ls -GF --autocolor'" >> ~/.tcshrc
+    echo "alias ls='\ls -GF --autocolor'" >> ~/.bash_profile
+    echo "alias ls    '\ls -GF --autocolor'" >> ~/.tcshrc
 fi
 
 mkdir -p ~/.vim/colors/
