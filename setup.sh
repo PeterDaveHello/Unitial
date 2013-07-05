@@ -21,8 +21,8 @@ done
 
 if [ $os = "Linux" ]
 then
-    echo "alias ls='\ls -GF --autocolor'" >> ~/.bash_profile
-    echo "alias ls    '\ls -GF --autocolor'" >> ~/.tcshrc
+    echo "alias ls='\ls -GF --color=auto'" >> ~/.bash_profile
+    echo "alias ls '\ls -GF --color=auto'" >> ~/.tcshrc
 else
     echo "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bash_profile
 fi
