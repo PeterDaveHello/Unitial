@@ -62,8 +62,8 @@ set laststatus=2 "ls
 
 " set code folding feature
 set foldmethod=indent "fdm
-set foldnestmax=2 "fdn max fold level
-set foldlevel=2 " "fdl default fold level
+set foldnestmax=5 "fdn max fold level
+set foldlevel=5 " "fdl default fold level
 
 " highlight syntax
 syntax on
