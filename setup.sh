@@ -1,5 +1,10 @@
 #!/bin/sh -x
 
+CAT="/bin/cat"
+ECHO="/bin/echo"
+MKDIR="/bin/mkdir"
+RM="/bin/rm"
+
 os=`uname`
 if [ $os = "Linux" ]
 then
@@ -15,20 +20,20 @@ path='https://raw.github.com/PeterDaveHello/Unitial/master/'
 for files in gitconfig tcshrc bash_profile inputrc vimrc
 do
     ${download} "$path""$files"
-    cat "$files" >> ~/."$files"
-    \rm "$files"
+    ${CAT} "$files" >> ~/."$files"
+    ${RM} "$files"
 done
 
 if [ $os = "Linux" ]
 then
-    echo "alias ls='\ls -GF --color=auto'" >> ~/.bash_profile
-    echo "alias ls '\ls -GF --color=auto'" >> ~/.tcshrc
+    ${ECHO} "alias ls='\ls -GF --color=auto'" >> ~/.bash_profile
+    ${ECHO} "alias ls '\ls -GF --color=auto'" >> ~/.tcshrc
 else
-    echo "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bash_profile
+    ${ECHO} "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bash_profile
 fi
 
-mkdir -p ~/.vim/colors/
+${MKDIR} -p ~/.vim/colors/
 ${download_o} ~/.vim/colors/kolor.vim https://raw.github.com/zeis/vim-kolor/master/colors/kolor.vim
 ${download_o} ~/.git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 
-echo -e "\n\e[1;36;40mUnitial is finished!\n\nPlease terminate all other works and restart your shell or re-login.\n \e[0m";
+${ECHO} -e "\n\e[1;36;40mUnitial is finished!\n\nPlease terminate all other works and restart your shell or re-login.\n \e[0m";
