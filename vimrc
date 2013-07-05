@@ -60,6 +60,11 @@ set statusline+=\ [%P]          "percent through file
 " display a status line at the bottom of the window
 set laststatus=2
 
+" set code folding feature
+set foldmethod=indent "fdm
+set foldnestmax=2 "fdn max fold level
+set foldlevel=2 " "fdl default fold level
+
 " highlight syntax
 syntax on
 
