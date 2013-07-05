@@ -1,40 +1,40 @@
 " charset
 set encoding=utf-8
-set fileencoding=utf-8 "fenc ,default save charset
+set fileencoding=utf-8               "fenc, default save charset
 set fileencodings=utf-8,big5,default "fencs, default opening charset priority
 
 " enable features which are not Vi compatible but really really nice.
-set nocompatible "nocp
+set nocompatible  "nocp
 
 " expand TABs to spaces
-set expandtab "et
+set expandtab     "et
 " set TAB's width
-set tabstop=4 "ts
+set tabstop=4     "ts
 " auto indent width
-set shiftwidth=4 "sw
+set shiftwidth=4  "sw
 
 " use the indent of the previous line for a newly created line
-set autoindent "ai
+set autoindent    "ai
 
 " 256 color mode
 set t_Co=256
 
 " show the ruler for the cursor
-set ruler "ru
+set ruler  "ru
 " show line numbers
 set number "nu
 
 " show the search results before stop typing
-set incsearch "is
+set incsearch     "is
 " highlight search results
-set hlsearch "hls
+set hlsearch      "hls
 " case-insensitive search
-set ignorecase "ic
+set ignorecase    "ic
 " smart search (override 'ic' when pattern has uppers)
-set smartcase "scs
+set smartcase     "scs
 
 " enable backspace in insert mode
-set backspace=2 "bs
+set backspace=2   "bs
 
 " file formats priority when try to read a file
 set fileformats=unix,dos,mac "ffs
@@ -62,8 +62,8 @@ set laststatus=2 "ls
 
 " set code folding feature
 set foldmethod=indent "fdm
-set foldnestmax=5 "fdn max fold level
-set foldlevel=5 " "fdl default fold level
+set foldnestmax=5     "fdn max fold level
+set foldlevel=5       "fdl default fold level
 
 " highlight syntax
 syntax on
@@ -80,6 +80,7 @@ highlight SpecialKey guifg=DarkGray
 
 " map hot key <Ctrl>+n to switch if shows line numbers
 map <C-n> :set nu!<BAR>set nu?<CR>
+
 
 "===  IF YOU WANT TO USE THE FOLLOWING FEATURE, PLEASE UNCOMMENT IT BY YOURSELF ==="
 
