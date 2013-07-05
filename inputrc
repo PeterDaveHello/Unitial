@@ -10,6 +10,6 @@
 #bash tab auto complete
 "\C-i": menu-complete
 set show-all-if-ambiguous on
-set mark-symlinked-directories on
 set completion-ignore-case on
+#set mark-symlinked-directories on
 
