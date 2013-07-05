@@ -58,7 +58,7 @@ set statusline+=\ \[%L\ lines\] "total lines
 set statusline+=\ [%P]          "percent through file
 
 " display a status line at the bottom of the window
-set laststatus=2
+set laststatus=2 "ls
 
 " set code folding feature
 set foldmethod=indent "fdm
@@ -72,8 +72,10 @@ syntax on
 colorscheme kolor
 
 " make whitespaces and TABs visible
-set list "l
-set listchars=tab:>-,trail:·"lcs
+"l
+set list
+"lcs
+set listchars=tab:>-,trail:·
 highlight SpecialKey guifg=DarkGray
 
 " map hot key <Ctrl>+n to switch if shows line numbers
