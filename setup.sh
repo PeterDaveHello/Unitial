@@ -13,7 +13,7 @@ then
     download_o='wget -nv -O'
 else
     ECHO="echo"
-    ${ECHO} -e "\n\e[1;36;40mYour operating system is NOT GNU/Linux\nmaybe a BSD system!?\n\e[0m";
+    ${ECHO} -e "\n\e[1;36;40mYour operating system is NOT GNU/Linux, maybe a BSD system!?\n\e[0m";
     download='fetch'
     download_o='fetch -o'
 fi
