@@ -1,3 +1,7 @@
+
+#don't save duplicates records and lines started with space in bash history
+HISTCONTROL=ignoreboth
+
 #set default charset
 export LC_ALL=en_US.UTF-8
 
