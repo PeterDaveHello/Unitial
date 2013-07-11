@@ -1,4 +1,6 @@
-#bind key
+#bindkey in bash
+
+#bind home,end,pageup,pagedown,insert,delete
 "\e[1~": beginning-of-line
 "\e[2~": overwrite-mode
 "\e[3~": delete-char
@@ -6,7 +8,7 @@
 "\e[5C~": forward-word
 "\e[5D~": backward-word
 
-#bash tab auto complete
+#bind tab to autocomplete
 "\C-i": menu-complete
 set show-all-if-ambiguous on
 set completion-ignore-case on
