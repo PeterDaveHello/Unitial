@@ -8,8 +8,8 @@
 "\e[5C~": forward-word
 "\e[5D~": backward-word
 
-#bind tab to autocomplete
-"\C-i": menu-complete
+#bind shift-tab to autocomplete
+"\e[Z": menu-complete
 set show-all-if-ambiguous on
 set completion-ignore-case on
 #set mark-symlinked-directories on
