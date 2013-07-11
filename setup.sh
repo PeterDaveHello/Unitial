@@ -21,7 +21,7 @@ fi
 ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working environment\n\nPlease wait...\n\n \e[0m";
 path='https://raw.github.com/PeterDaveHello/Unitial/master/'
 
-${ECHO} -e "\n\e[1;36;40mTyy to download and setup configs from server...\n\e[0m";
+${ECHO} -e "\n\e[1;36;40mTry to download and setup configs from server...\n\e[0m";
 for files in gitconfig tcshrc bash_profile inputrc vimrc
 do
     ${download} "$path""$files"
@@ -38,10 +38,10 @@ else
     ${ECHO} "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bash_profile
 fi
 
-${ECHO} -e "\n\e[1;36;40mTyy to download VIM color scheme from server...\n\e[0m";
+${ECHO} -e "\n\e[1;36;40mTry to download VIM color scheme from server...\n\e[0m";
 ${MKDIR} -p ~/.vim/colors/
 ${download_o} ~/.vim/colors/kolor.vim https://raw.github.com/zeis/vim-kolor/master/colors/kolor.vim
-${ECHO} -e "\n\e[1;36;40mTyy to download git's auto completion configs from server...\n\e[0m";
+${ECHO} -e "\n\e[1;36;40mTry to download git's auto completion configs from server...\n\e[0m";
 ${download_o} ~/.git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 
 ${ECHO} -e "\n\e[1;36;40mUnitial is finished!\n\nPlease terminate all other works and restart your shell or re-login.\n \e[0m";
