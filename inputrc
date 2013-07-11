@@ -1,6 +1,5 @@
 #bind key
 "\e[1~": beginning-of-line
-"\e[1~":  beginning-of-line
 "\e[2~": overwrite-mode
 "\e[3~": delete-char
 "\e[4~": end-of-line
