@@ -38,7 +38,7 @@ else
     ${ECHO} "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bash_profile
 fi
 
-${ECHO} -e "\n\e[1;36;40mTry to download VIM color scheme from server...\n\e[0m";
+${ECHO} -e "\n\e[1;36;40mTry to download VIM color scheme - Kolor from server...\n\e[0m";
 ${MKDIR} -p ~/.vim/colors/
 ${download_o} ~/.vim/colors/kolor.vim https://raw.github.com/zeis/vim-kolor/master/colors/kolor.vim
 ${ECHO} -e "\n\e[1;36;40mTry to download git's auto completion configs from server...\n\e[0m";
