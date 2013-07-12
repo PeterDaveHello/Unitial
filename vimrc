@@ -65,6 +65,9 @@ set foldmethod=indent "fdm
 set foldnestmax=5     "fdn max fold level
 set foldlevel=5       "fdl default fold level
 
+" enable mouse in all mode
+" set mouse=a
+
 " highlight syntax
 syntax on
 
