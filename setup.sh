@@ -9,8 +9,8 @@ if [ $os = "Linux" ]
 then
     ECHO="/bin/echo"
     ${ECHO} -e "\n\e[1;36;40mYour operating system is GNU/Linux\n\e[0m";
-    download='wget -nv'
-    download_o='wget -nv -O'
+    download='wget -nv --no-check-certificate'
+    download_o='wget -nv --no-check-certificate -O'
 else
     ECHO="echo"
     ${ECHO} -e "\n\e[1;36;40mYour operating system is NOT GNU/Linux, maybe a BSD system!?\n\e[0m";
