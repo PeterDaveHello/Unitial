@@ -40,22 +40,20 @@ set backspace=2   "bs
 set fileformats=unix,dos,mac "ffs
 
 " set statusbar
-set statusline+=%*
 set statusline+=%f              "filename
 set statusline+=%m              "modified flag
 set statusline+=%r              "read only flag
 set statusline+=\ \%y           "filetype
-set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
 set statusline+=%=              "left/right separator
-set statusline+=%*              "show the errors/warning in the status line
-set statusline+=%#warningmsg#
-set statusline+=%*
-set statusline+=%=              "left/right separator
-set statusline+=%h\ \           "help file flag
-set statusline+=%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}
+set statusline+=%#warningmsg#   "show the errors/warning in the status line
+set statusline+=%h              "help file flag
+set statusline+=%*              "color off
+set statusline+=\ [%{&ff}\]\    "fileformat (unix, dos, mac ...)
+set statusline+=%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"} "file charset
 set statusline+=[%l,%c]         "cursor line,column
 set statusline+=\ \[%L\ lines\] "total lines
 set statusline+=\ [%P]          "percent through file
+set statusline+=\ %a            "if open multiple files, show current file and and the number of all files
 
 " display a status line at the bottom of the window
 set laststatus=2 "ls
