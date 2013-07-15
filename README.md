@@ -12,26 +12,24 @@ Introduction
 I hope to make a script to initialize the environment for friendly use in Unix-like OS,
 
 Currently, I can only aim(and test) at FreeBSD and most Linux distros.
+(Originally, I do this for myself only, but I think I can share it to other people, so I upload it to github!)
 
 If you are interesting in the very small project, welcome to fork and feedback, or join it!
 
-If there is any question and suggestion, please let me know, thanks.
+Any question and suggestion, please let me know, thanks.
 
 
 How to use it?
 ==============
 First :
-
 (if you are using FreeBSD, please use fetch instead of wget)
-wget https://raw.github.com/PeterDaveHello/Unitial/master/setup.sh
+`wget https://raw.github.com/PeterDaveHello/Unitial/master/setup.sh`
 
 Second :
-
-chmod +x setup.sh
+`chmod +x setup.sh`
 
 Third :
-
-./setup.sh
+`./setup.sh`
 
 And all works will be done in seconds.
 
@@ -49,10 +47,10 @@ I think that maybe I can share it to someone else, so I did some modify and uplo
 What's in it?
 =============
 Bash/tcsh/csh Shell :
-auto completion(BASH only), useful alias, keymap issue for many user
+auto completion(BASH only), useful alias, keymap issue for many users, BASH is the major shell
 
 Vim :
-useful setting and comfortable color scheme
+useful setting, status bar and comfortable color scheme
 
 Git :
 useful alias and setting, auto completion in BASH
@@ -60,7 +58,7 @@ useful alias and setting, auto completion in BASH
 
 Notes
 =====
-Currently, I only test on FreeBSD and Linux distros, if it's not work, please tell me to fix.
+Currently, I only test on "lastest" FreeBSD and most Linux distros, if it's not work, please tell me to fix.
 
 Author
 ======
