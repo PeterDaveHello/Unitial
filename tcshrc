@@ -14,8 +14,8 @@ bindkey "^W" backward-delete-word
 bindkey -k up history-search-backward
 bindkey -k down history-search-forward
 
-#tmux color issue& auto attatch
-alias tmux  '\tmux a -2'
+#tmux color issue
+alias tmux  '\tmux -2'
 
 
 ###alias###
