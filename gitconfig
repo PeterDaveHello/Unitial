@@ -5,19 +5,19 @@
     ui = auto
 [alias]
     ad = add .
-    df = diff
+    br = branch
+    chp = cherry-pick
     ci = commit -v
     co = checkout
-    br = branch
-    st = status
-    mg = merge
+    df = diff
     fh = fetch
-    chp = cherry-pick
+    mg = merge
     sh = stash
     sm = submodule
+    st = status
+    diffs = diff --stat --summary
     logs = log --stat --summary
     logt = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar'
-    diffs = diff --stat --summary
 [push]
     # for only push to current branch
     default = tracking
