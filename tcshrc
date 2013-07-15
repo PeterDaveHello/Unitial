@@ -55,3 +55,8 @@ alias cd...  '\cd ../..'
 alias c     'clear'
 
 ###alias###
+
+#load git auto completion script
+if ( -e ~/.git-completion.tcsh && -e ~/.git-completion.bash ) then
+  source ~/.git-completion.tcsh
+endif

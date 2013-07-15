@@ -42,6 +42,8 @@ ${ECHO} -e "\n\e[1;36;40mTry to download VIM color scheme - Kolor from server...
 ${MKDIR} -p ~/.vim/colors/
 ${download_o} ~/.vim/colors/kolor.vim https://raw.github.com/zeis/vim-kolor/master/colors/kolor.vim
 ${ECHO} -e "\n\e[1;36;40mTry to download git's auto completion configs from server...\n\e[0m";
-${download_o} ~/.git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+git_auto_complete_path='https://raw.github.com/git/git/master/contrib/completion/git-completion.'
+${download_o} ~/.git-completion.bash "$git_auto_complete_path"bash
+${download_o} ~/.git-completion.tcsh "$git_auto_complete_path"tcsh
 
 ${ECHO} -e "\n\e[1;36;40mUnitial is finished!\n\nPlease terminate all other works and restart your shell or re-login.\n \e[0m";
