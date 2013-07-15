@@ -8,10 +8,13 @@
     br = branch
     chp = cherry-pick
     ci = commit -v
+    cia = commit -v --amend
     co = checkout
     df = diff
     fh = fetch
     mg = merge
+    rb = rebase
+    rbi = rebase -i
     sh = stash
     sm = submodule
     st = status
