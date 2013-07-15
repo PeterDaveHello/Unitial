@@ -11,17 +11,15 @@ export EDITOR=vim
 #tmux color issue
 alias tmux='\tmux -2'
 
+
+###alias###
+
 #ls
 alias ls='\ls -GF'
 alias l='ls -C'
-alias ll='ls -l'
+alias ll='ls -lh'
 alias la='ls -A'
-alias lal='ls -lA'
-
-alias c='clear'
-
-alias cd..='\cd ..'
-alias cd...='\cd ../..'
+alias lal='ls -lha'
 
 #grep
 alias grep='\grep --color=auto'
@@ -33,6 +31,16 @@ alias p='ping'
 alias n='nslookup'
 alias d='dig'
 alias t='mtr'
+
+#cd
+alias cd..='\cd ..'
+alias cd...='\cd ../..'
+
+#other alias
+alias c='clear'
+
+###alias###
+
 
 # network-related commands or tools which need auto completion
 complete -W "$(echo $(grep '^ssh ' ~/.bash_history | sort -u | sed 's/^ssh //'))" ssh

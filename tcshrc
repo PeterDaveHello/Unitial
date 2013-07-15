@@ -17,20 +17,33 @@ bindkey -k down history-search-forward
 #tmux color issue& auto attatch
 alias tmux  '\tmux a -2'
 
+
+###alias###
+
 #ls
 alias ls    '\ls -GF'
 alias l     'ls -C'
-alias ll    'ls -l'
+alias ll    'ls -lh'
 alias la    'ls -A'
-alias lal   'ls -lA'
+alias lal   'ls -lha'
 
-alias c     'clear'
-
-alias cd..  '\cd ..'
-alias cd...  '\cd ../..'
+#grep
+alias grep  '\grep --color=auto'
+alias fgrep '\fgrep --color=auto'
+alias egrep '\egrep --color=auto'
 
 #network tool
 alias p     'ping'
 alias n     'nslookup'
 alias d     'dig'
 alias t     'mtr'
+
+
+#cd
+alias cd..  '\cd ..'
+alias cd...  '\cd ../..'
+
+#other alias
+alias c     'clear'
+
+###alias###
