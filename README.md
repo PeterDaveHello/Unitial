@@ -46,8 +46,8 @@ I think that maybe I can share it to someone else, so I did some modify and uplo
 
 What's in it?
 =============
-Bash/tcsh/csh Shell :
-auto completion(BASH only), useful alias, keymap issue for many users, BASH is the major shell
+Bash/tcsh/csh/zsh Shell :
+auto completion, useful alias, keymap issue for many users, because BASH is my major shell and I didn't use zsh, bash's feature will be more than zsh.
 
 Vim :
 useful setting, status bar and comfortable color scheme
