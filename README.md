@@ -23,7 +23,7 @@ How to use it?
 ==============
 First :
 (if you are using FreeBSD, please use fetch instead of wget)
-`wget https://raw.github.com/PeterDaveHello/Unitial/master/setup.sh`
+`wget --no-check-certificate https://raw.github.com/PeterDaveHello/Unitial/master/setup.sh`
 
 Second :
 `chmod +x setup.sh`
