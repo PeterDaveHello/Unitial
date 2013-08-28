@@ -14,11 +14,13 @@
     fh = fetch
     mg = merge
     rb = rebase
+    rbc = rebase --continue
     rbi = rebase -i
     sh = stash
     sm = submodule
     st = status
     diffs = diff --stat --summary
+    logp = log -p
     logs = log --stat --summary
     logt = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar'
 [push]
