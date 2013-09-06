@@ -16,6 +16,7 @@
     rb = rebase
     rbc = rebase --continue
     rbi = rebase -i
+    rbm = rebase master
     sh = stash
     sm = submodule
     st = status
