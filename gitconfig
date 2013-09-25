@@ -23,7 +23,7 @@
     diffs = diff --stat --summary
     logp = log -p
     logs = log --stat --summary
-    logt = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar'
+    logt = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset'
 [push]
     # for only push to current branch
     default = tracking
