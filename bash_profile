@@ -16,7 +16,6 @@ alias tmux='\tmux -2'
 ###alias###
 
 #ls
-alias ls='\ls -GF'
 alias l='ls -C'
 alias ll='ls -lh'
 alias la='ls -A'
