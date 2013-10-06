@@ -33,9 +33,11 @@ ${ECHO} -e "\n\e[1;36;40mAdd some color setting which depends on your OS...\n\e[
 if [ $os = "Linux" ]
 then
     ${ECHO} "alias ls='\ls -F --color=auto'" >> ~/.bash_profile
+    ${ECHO} "alias ls='\ls -F --color=auto'" >> ~/.zshrc
     ${ECHO} "alias ls '\ls -F --color=auto'" >> ~/.tcshrc
 else
     ${ECHO} "alias ls='\ls -GF'" >> ~/.bash_profile
+    ${ECHO} "alias ls='\ls -GF'" >> ~/.zshrc
     ${ECHO} "alias ls '\ls -GF'" >> ~/.tcshrc
     ${ECHO} "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bash_profile
 fi
