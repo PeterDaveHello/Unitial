@@ -88,3 +88,5 @@ map <C-n> :set nu!<BAR>set nu?<CR>
 " remember and go to the last used location automatically.
 "au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
+" auto remove trailing whitespace when saving file
+"autocmd BufWritePre * :%s/\s\+$//e
