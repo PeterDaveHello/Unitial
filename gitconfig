@@ -17,13 +17,20 @@
     rbc = rebase --continue
     rbi = rebase -i
     rbm = rebase master
+    rs = reset
+    rsh = reset --hard
     sh = stash
     sm = submodule
     st = status
     diffs = diff --stat --summary
-    logp = log -p
-    logs = log --stat --summary
-    logt = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset'
+    lg = log
+    lgp = log -p
+    lgs = log --stat --summary
+    lgt = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset'
+    lgf = log --follow
+    lgpf = log -p --follow
+    lgsf = log --stat --summary --follow
+    lgtf = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset' --follow
 [push]
     # for only push to current branch
     default = tracking
