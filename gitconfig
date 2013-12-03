@@ -14,6 +14,7 @@
     fh = fetch
     mg = merge
     rb = rebase
+    rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase -i
     rbm = rebase master
