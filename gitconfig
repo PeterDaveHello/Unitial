@@ -37,7 +37,7 @@
     default = tracking
 [core]
     editor = vim
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore_global
 [mergetool]
     keepBackup = true
 [gui]
