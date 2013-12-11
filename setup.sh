@@ -42,6 +42,12 @@ elif [ $os = "FreeBSD" ] || [ $os = "Darwin" ] || [ $os = "DragonFly" ] || [ $os
     ${ECHO} "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bash_profile
 fi
 
+if [ $os = "FreeBSD" ];then
+    ${ECHO} -e "\n\e[1;36;40mAdd FreeBSD's package mirror setting...\n\e[0m";
+    ${ECHO} -e "\n#package mirror setting\nexport PACKAGEROOT=http://ftp.tw.freebsd.org" >> ~/.bash_profile
+    ${ECHO} -e "\n#package mirror setting\nsetenv PACKAGEROOT http://ftp.tw.freebsd.org" >> ~/.tcshrc
+fi
+
 ${ECHO} -e "\n\e[1;36;40mTry to download VIM color scheme - Kolor from server...\n\e[0m";
 ${MKDIR} -p ~/.vim/colors/
 ${download_o} ~/.vim/colors/kolor.vim https://raw.github.com/zeis/vim-kolor/master/colors/kolor.vim
