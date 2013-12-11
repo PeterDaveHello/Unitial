@@ -22,7 +22,7 @@ fi
 ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working environment\n\nPlease wait...\n\n\e[0m";
 path='https://raw.github.com/PeterDaveHello/Unitial/master/'
 
-${ECHO} -e "\n\e[1;36;40mTry to download and setup configs from server...\n\e[0m";
+${ECHO} -e "\n\e[1;36;40mDownload and setup configs from server...\n\e[0m";
 for files in gitconfig tcshrc bash_profile inputrc vimrc zshrc gitignore_global
 do
     ${download} "$path""$files"
@@ -48,10 +48,10 @@ if [ $os = "FreeBSD" ];then
     ${ECHO} -e "\n#package mirror setting\nsetenv PACKAGEROOT http://ftp.tw.freebsd.org" >> ~/.tcshrc
 fi
 
-${ECHO} -e "\n\e[1;36;40mTry to download VIM color scheme - Kolor from server...\n\e[0m";
+${ECHO} -e "\n\e[1;36;40mDownload VIM color scheme - Kolor from server...\n\e[0m";
 ${MKDIR} -p ~/.vim/colors/
 ${download_o} ~/.vim/colors/kolor.vim https://raw.github.com/zeis/vim-kolor/master/colors/kolor.vim
-${ECHO} -e "\n\e[1;36;40mTry to download git's auto completion configs from server...\n\e[0m";
+${ECHO} -e "\n\e[1;36;40mDownload git's auto completion configs from server...\n\e[0m";
 git_auto_complete_path='https://raw.github.com/git/git/master/contrib/completion/git-completion.'
 ${download_o} ~/.git-completion.bash "$git_auto_complete_path"bash
 ${download_o} ~/.git-completion.tcsh "$git_auto_complete_path"tcsh
