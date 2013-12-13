@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 CAT="/bin/cat"
 MKDIR="/bin/mkdir"
