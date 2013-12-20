@@ -38,7 +38,9 @@ alias cd...='\cd ../..'
 
 #other alias
 alias c='clear'
-alias sudo='sudo -E'
+alias sudo='\sudo -E'
+alias du='\df -h'
+alias df='\df -h'
 
 ###alias###
 
