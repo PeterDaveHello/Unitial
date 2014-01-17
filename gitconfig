@@ -1,8 +1,5 @@
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    ui = auto
+    ui = true
 [alias]
     ad = add .
     br = branch
