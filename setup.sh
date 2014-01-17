@@ -1,6 +1,7 @@
 #!/bin/sh
 
 CAT="/bin/cat"
+CHMOD="/bin/chmod"
 MKDIR="/bin/mkdir"
 RM="/bin/rm"
 
@@ -51,6 +52,10 @@ fi
 ${ECHO} -e "\n\e[1;36;40mDownload VIM color scheme - Kolor from server...\n\e[0m";
 ${MKDIR} -p ~/.vim/colors/
 ${download_o} ~/.vim/colors/kolor.vim https://raw.github.com/zeis/vim-kolor/master/colors/kolor.vim
+${ECHO} -e "\n\e[1;36;40mDownload git contrib - diff-highlight from server...\n\e[0m";
+${MKDIR} -p ~/.git/contrib/
+${download_o} ~/.git/contrib/diff-highlight https://github.com/git/git/raw/master/contrib/diff-highlight/diff-highlight
+${CHMOD} +x ~/.git/contrib/diff-highlight
 ${ECHO} -e "\n\e[1;36;40mDownload git's auto completion configs from server...\n\e[0m";
 git_auto_complete_path='https://raw.github.com/git/git/master/contrib/completion/git-completion.'
 ${download_o} ~/.git-completion.bash "$git_auto_complete_path"bash
