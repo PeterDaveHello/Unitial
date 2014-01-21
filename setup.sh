@@ -24,7 +24,7 @@ ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working en
 path='https://raw.github.com/PeterDaveHello/Unitial/master/'
 
 ${ECHO} -e "\n\e[1;36;40mDownload and setup configs from server...\n\e[0m";
-for files in gitconfig tcshrc bash_profile inputrc vimrc zshrc gitignore_global
+for files in gitconfig tcshrc bashrc inputrc vimrc zshrc gitignore_global
 do
     ${download} "$path""$files"
     ${CAT} "$files" >> ~/."$files"
@@ -33,19 +33,19 @@ done
 
 ${ECHO} -e "\n\e[1;36;40mAdd some color setting which depends on your OS...\n\e[0m";
 if [ $os = "Linux" ] || [ $os = "GNU" ];then
-    ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.bash_profile
+    ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.bashrc
     ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.zshrc
     ${ECHO} -e "\n#color setting\nalias ls '\ls -F --color=auto'" >> ~/.tcshrc
 elif [ $os = "FreeBSD" ] || [ $os = "Darwin" ] || [ $os = "DragonFly" ] || [ $os = "OpenBSD" ];then
-    ${ECHO} -e "\n#color setting\nalias ls='\ls -GF'" >> ~/.bash_profile
+    ${ECHO} -e "\n#color setting\nalias ls='\ls -GF'" >> ~/.bashrc
     ${ECHO} -e "\n#color setting\nalias ls='\ls -GF'" >> ~/.zshrc
     ${ECHO} -e "\n#color setting\nalias ls '\ls -GF'" >> ~/.tcshrc
-    ${ECHO} "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bash_profile
+    ${ECHO} "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bashrc
 fi
 
 if [ $os = "FreeBSD" ];then
     ${ECHO} -e "\n\e[1;36;40mAdd FreeBSD's package mirror setting...\n\e[0m";
-    ${ECHO} -e "\n#package mirror setting\nexport PACKAGEROOT=http://ftp.tw.freebsd.org" >> ~/.bash_profile
+    ${ECHO} -e "\n#package mirror setting\nexport PACKAGEROOT=http://ftp.tw.freebsd.org" >> ~/.bashrc
     ${ECHO} -e "\n#package mirror setting\nsetenv PACKAGEROOT http://ftp.tw.freebsd.org" >> ~/.tcshrc
 fi
 
