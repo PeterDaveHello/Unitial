@@ -36,6 +36,7 @@
     editor = vim
     excludesfile = ~/.gitignore_global
     pager = ~/.git/contrib/diff-highlight | less
+    preloadindex = true
 [mergetool]
     keepBackup = true
 [gui]
