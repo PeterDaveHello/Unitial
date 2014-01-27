@@ -8,6 +8,7 @@
     cia = commit -v --amend
     co = checkout
     df = diff
+    dfs = diff --stat --summary
     fh = fetch
     mg = merge
     rb = rebase
@@ -17,10 +18,11 @@
     rbm = rebase master
     rs = reset
     rsh = reset --hard
+    pl = pull
+    plr = pull --rebase
     sh = stash
     sm = submodule
     st = status
-    diffs = diff --stat --summary
     lg = log
     lgp = log -p
     lgs = log --stat --summary
