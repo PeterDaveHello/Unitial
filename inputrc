@@ -10,6 +10,7 @@
 
 #bind shift-tab to autocomplete
 "\e[Z": menu-complete
+set visible-stats on
 set show-all-if-ambiguous on
 set completion-ignore-case on
 #set mark-symlinked-directories on
