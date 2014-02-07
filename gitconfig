@@ -40,7 +40,7 @@
     pager = ~/.git/contrib/diff-highlight | less
     preloadindex = true
 [mergetool]
-    keepBackup = true
+    keepBackup = false
 [gui]
     encoding = utf-8
 [i18n]
