@@ -24,7 +24,7 @@ ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working en
 path='https://raw.github.com/PeterDaveHello/Unitial/master/'
 
 ${ECHO} -e "\n\e[1;36;40mDownload and setup configs from server...\n\e[0m";
-for files in gitconfig tcshrc bashrc inputrc vimrc zshrc gitignore_global
+for files in gitconfig tcshrc bashrc bash_profile inputrc vimrc zshrc gitignore_global
 do
     ${download} "$path""$files"
     ${CAT} "$files" >> ~/."$files"
