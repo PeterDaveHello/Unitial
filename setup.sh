@@ -52,6 +52,7 @@ fi
 if [ $os = "FreeBSD" ];then
     ${ECHO} -e "\n\e[1;36;40mAdd FreeBSD's package mirror setting...\n\e[0m";
     ${ECHO} -e "\n#package mirror setting\nexport PACKAGEROOT=http://ftp.tw.freebsd.org" >> ~/.bashrc
+    ${ECHO} -e "\n#package mirror setting\nexport PACKAGEROOT=http://ftp.tw.freebsd.org" >> ~/.zshrc
     ${ECHO} -e "\n#package mirror setting\nsetenv PACKAGEROOT http://ftp.tw.freebsd.org" >> ~/.tcshrc
 fi
 
@@ -66,5 +67,6 @@ ${ECHO} -e "\n\e[1;36;40mDownload git's auto completion configs from server...\n
 git_auto_complete_path='https://raw.github.com/git/git/master/contrib/completion/git-completion.'
 ${download_o} ~/.git-completion.bash "$git_auto_complete_path"bash
 ${download_o} ~/.git-completion.tcsh "$git_auto_complete_path"tcsh
+${download_o} ~/.git-completion.zsh "$git_auto_complete_path"zsh
 
 ${ECHO} -e "\n\e[1;36;40mUnitial installation was finished!\n\nPlease terminate all other works and restart your shell or re-login.\n\e[0m";
