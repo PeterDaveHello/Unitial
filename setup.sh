@@ -31,6 +31,11 @@ do
     ${RM} "$files"
 done
 
+${download} "$path"ssh_config
+${MKDIR} -p ~/.ssh/
+${CAT} ssh_config >> ~/.ssh/config
+${RM} ssh_config
+
 ${ECHO} -e "\n\e[1;36;40mAdd some color setting which depends on your OS...\n\e[0m";
 if [ $os = "Linux" ] || [ $os = "GNU" ];then
     ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.bashrc
