@@ -1,3 +1,5 @@
+#unalias all the alias(es) before set anything
+unalias *
 
 #set default charset and language
 setenv LANG en_US.UTF-8

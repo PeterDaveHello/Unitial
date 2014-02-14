@@ -1,3 +1,6 @@
+#unalias all the alias(es) before set anything
+unalias -m "*"
+
 #default charset and language
 LANG='en_US.UTF-8'
 LC_ALL='en_US.UTF-8'

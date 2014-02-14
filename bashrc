@@ -1,3 +1,5 @@
+#unalias all the alias(es) before set anything
+unalias -a
 
 #don't save duplicates records and lines started with space in bash history
 HISTCONTROL=ignoreboth
