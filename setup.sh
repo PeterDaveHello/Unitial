@@ -5,6 +5,8 @@ CHMOD="/bin/chmod"
 MKDIR="/bin/mkdir"
 RM="/bin/rm"
 
+repo_path='https://raw.github.com/PeterDaveHello/Unitial/master/'
+
 os=`uname`
 if [ $os = "Linux" ] || [ $os = "GNU" ] || [ $os = "Darwin" ];then
     ECHO="/bin/echo"
@@ -21,17 +23,16 @@ else
 fi
 
 ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working environment\n\nPlease wait...\n\n\e[0m";
-path='https://raw.github.com/PeterDaveHello/Unitial/master/'
 
 ${ECHO} -e "\n\e[1;36;40mDownload and setup configs from server...\n\e[0m";
 for files in gitconfig tcshrc bashrc bash_profile inputrc vimrc zshrc gitignore_global
 do
-    ${download} "$path""$files"
+    ${download} "$repo_path""$files"
     ${CAT} "$files" >> ~/."$files"
     ${RM} "$files"
 done
 
-${download} "$path"ssh_config
+${download} "$repo_path"ssh_config
 ${MKDIR} -p ~/.ssh/
 ${CAT} ssh_config >> ~/.ssh/config
 ${RM} ssh_config
