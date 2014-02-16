@@ -4,9 +4,13 @@
     ad = add .
     br = branch
     chp = cherry-pick
+    chpa = cherry-pick --abort
+    chpc = cherry-pick --continue
     ci = commit -v
     cia = commit -v --amend
+    cl = clone
     co = checkout
+    cob = checkout -b
     df = diff
     dfs = diff --stat --summary
     fh = fetch
@@ -20,6 +24,7 @@
     rsh = reset --hard
     pl = pull
     plr = pull --rebase
+    ps = push
     sh = stash
     sm = submodule
     st = status
