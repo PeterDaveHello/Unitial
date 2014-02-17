@@ -88,7 +88,7 @@ map <C-n> :set nu!<BAR>set nu?<CR>
 autocmd FileType make setlocal et!
 autocmd FileType html,css,javascript setlocal sw=2 ts=2
 
-"===  IF YOU WANT TO USE THE FOLLOWING FEATURE, PLEASE UNCOMMENT IT BY YOURSELF ==="
+"=== IF YOU WANT TO USE THE FOLLOWING FEATURE, PLEASE UNCOMMENT IT BY YOURSELF ==="
 
 " remember and go to the last used location automatically.
 "autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
