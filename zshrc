@@ -51,5 +51,6 @@ alias sudo='\sudo -E'
 alias df='\df -h'
 alias du='\du -h'
 alias free='\free -h'
+alias wgetncc='wget --no-check-certificate'
 
 ###alias###
