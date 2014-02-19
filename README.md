@@ -47,7 +47,7 @@ I think that maybe I can share it to someone else, so I did some modify and uplo
 What's in it?
 =============
 Bash/tcsh/csh/zsh Shell :
-auto completion, useful alias, keymap issue for many users, because BASH is my major shell and I didn't use zsh, bash's feature will be more than zsh.
+auto completion, useful alias, keymap issue for many users, because BASH is my major shell and I seldom use zsh, bash's feature will be more than others.
 
 Vim :
 useful setting, status bar and comfortable color scheme
@@ -55,6 +55,8 @@ useful setting, status bar and comfortable color scheme
 Git :
 useful alias and setting, auto completion in BASH
 
+SSH :
+useful setting
 
 Notes
 =====
@@ -63,4 +65,4 @@ Currently, I only test on "lastest" FreeBSD and most Linux distros, if it's not 
 Author
 ======
 Peter Dave Hello
-peter.dave.hello@outlook.com
+hsu [at] peterdavehello [dot] org
