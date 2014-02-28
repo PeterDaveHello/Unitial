@@ -1,3 +1,4 @@
+
 " charset
 set encoding=utf-8                   "enc, vim buffer charset, NOT the file's charset
 set fileencoding=utf-8               "fenc, default save charset

@@ -1,3 +1,4 @@
+
 #load script
 fpath=(~/ $fpath)
 
