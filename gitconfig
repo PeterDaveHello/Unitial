@@ -4,6 +4,7 @@
 [alias]
     ad = add .
     br = branch
+    bl = blame
     chp = cherry-pick
     chpa = cherry-pick --abort
     chpc = cherry-pick --continue
@@ -21,6 +22,10 @@
     rbc = rebase --continue
     rbi = rebase -i
     rbm = rebase master
+    rmt = remote
+    rmtv = remote -v
+    rmta = remote add
+    rmtau = remote add upstream
     rs = reset
     rsh = reset --hard
     pl = pull
