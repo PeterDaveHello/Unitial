@@ -83,6 +83,10 @@ highlight SpecialKey guifg=DarkGray
 " map hot key <Ctrl>+n to switch if shows line numbers
 map <C-n> :set nu!<BAR>set nu?<CR>
 
+"=== setting depends on filetype  ==="
+" au, autocommand
+autocmd FileType make setlocal et!
+autocmd FileType html,css,javascript setlocal sw=2 ts=2
 
 "===  IF YOU WANT TO USE THE FOLLOWING FEATURE, PLEASE UNCOMMENT IT BY YOURSELF ==="
 
