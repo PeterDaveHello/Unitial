@@ -38,15 +38,15 @@ ${CAT} ssh_config >> ~/.ssh/config
 ${RM} ssh_config
 
 ${ECHO} -e "\n\e[1;36;40mAdd some color setting which depends on your OS...\n\e[0m";
-if [ $os = "Linux" ] || [ $os = "GNU" ];then
-    ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.bashrc
-    ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.zshrc
-    ${ECHO} -e "\n#color setting\nalias ls '\ls -F --color=auto'" >> ~/.tcshrc
-elif [ $os = "FreeBSD" ] || [ $os = "Darwin" ] || [ $os = "DragonFly" ] || [ $os = "OpenBSD" ];then
+if [ $os = "FreeBSD" ] || [ $os = "Darwin" ];then
     ${ECHO} -e "\n#color setting\nalias ls='\ls -GF'" >> ~/.bashrc
     ${ECHO} -e "\n#color setting\nalias ls='\ls -GF'" >> ~/.zshrc
     ${ECHO} -e "\n#color setting\nalias ls '\ls -GF'" >> ~/.tcshrc
     ${ECHO} "export LSCOLORS=gxfxcxdxbxegedabagacad" >> ~/.bashrc
+else
+    ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.bashrc
+    ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.zshrc
+    ${ECHO} -e "\n#color setting\nalias ls '\ls -F --color=auto'" >> ~/.tcshrc
 fi
 
 if [ $os = "FreeBSD" ];then
