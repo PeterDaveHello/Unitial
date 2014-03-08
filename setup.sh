@@ -8,18 +8,18 @@ RM="/bin/rm"
 repo_path='https://raw.github.com/PeterDaveHello/Unitial/master/'
 
 os=`uname`
-if [ $os = "Linux" ] || [ $os = "GNU" ] || [ $os = "Darwin" ];then
+if [ $os = "FreeBSD" ];then
+    ECHO="echo"
+    ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m";
+    ${ECHO} -e "\n\e[1;36;40mSuppose you have 'fetch' to download files!\n\e[0m";
+    download='fetch'
+    download_o='fetch -o'
+else
     ECHO="/bin/echo"
     ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m";
     ${ECHO} -e "\n\e[1;36;40mSuppose you have 'wget' to download files!\n\e[0m";
     download='wget -nv --no-check-certificate'
     download_o='wget -nv --no-check-certificate -O'
-else
-    ECHO="echo"
-    ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m";
-    ${ECHO} -e "\n\e[1;36;40mSuppose you are using a BSD system and you have 'fetch' to download files!\n\e[0m";
-    download='fetch'
-    download_o='fetch -o'
 fi
 
 ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working environment\n\nPlease wait...\n\n\e[0m";
