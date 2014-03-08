@@ -17,9 +17,9 @@ if [ $os = "FreeBSD" ];then
 else
     ECHO="/bin/echo"
     ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m";
-    ${ECHO} -e "\n\e[1;36;40mSuppose you have 'wget' to download files!\n\e[0m";
-    download='wget -nv --no-check-certificate'
-    download_o='wget -nv --no-check-certificate -O'
+    ${ECHO} -e "\n\e[1;36;40mSuppose you have 'curl' to download files!\n\e[0m";
+    download='curl -kO'
+    download_o='curl -ko'
 fi
 
 ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working environment\n\nPlease wait...\n\n\e[0m";
