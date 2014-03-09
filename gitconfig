@@ -1,61 +1,61 @@
 
 [color]
-    ui = true
+	ui = true
 [alias]
-    ad = add .
-    br = branch
-    bl = blame
-    chp = cherry-pick
-    chpa = cherry-pick --abort
-    chpc = cherry-pick --continue
-    ci = commit -v
-    cia = commit -v --amend
-    cl = clone
-    co = checkout
-    cob = checkout -b
-    df = diff
-    dfs = diff --stat --summary
-    fh = fetch
-    mg = merge
-    rb = rebase
-    rba = rebase --abort
-    rbc = rebase --continue
-    rbi = rebase -i
-    rbm = rebase master
-    rmt = remote
-    rmtv = remote -v
-    rmta = remote add
-    rmtau = remote add upstream
-    rs = reset
-    rsh = reset --hard
-    pl = pull
-    plr = pull --rebase
-    ps = push
-    sh = stash
-    sm = submodule
-    st = status
-    lg = log
-    lgp = log -p
-    lgs = log --stat --summary
-    lgt = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset'
-    lgf = log --follow
-    lgpf = log -p --follow
-    lgsf = log --stat --summary --follow
-    lgtf = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset' --follow
+	ad = add .
+	br = branch
+	bl = blame
+	chp = cherry-pick
+	chpa = cherry-pick --abort
+	chpc = cherry-pick --continue
+	ci = commit -v
+	cia = commit -v --amend
+	cl = clone
+	co = checkout
+	cob = checkout -b
+	df = diff
+	dfs = diff --stat --summary
+	fh = fetch
+	mg = merge
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbi = rebase -i
+	rbm = rebase master
+	rmt = remote
+	rmtv = remote -v
+	rmta = remote add
+	rmtau = remote add upstream
+	rs = reset
+	rsh = reset --hard
+	pl = pull
+	plr = pull --rebase
+	ps = push
+	sh = stash
+	sm = submodule
+	st = status
+	lg = log
+	lgp = log -p
+	lgs = log --stat --summary
+	lgt = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset'
+	lgf = log --follow
+	lgpf = log -p --follow
+	lgsf = log --stat --summary --follow
+	lgtf = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset' --follow
 [push]
-    # for only push to current branch
-    default = tracking
+	# for only push to current branch
+	default = tracking
 [core]
-    editor = vim
-    excludesfile = ~/.gitignore_global
-    pager = ~/.git/contrib/diff-highlight | less
-    preloadindex = true
+	editor = vim
+	excludesfile = ~/.gitignore_global
+	pager = ~/.git/contrib/diff-highlight | less
+	preloadindex = true
 [mergetool]
-    keepBackup = false
+	keepBackup = false
 [gui]
-    encoding = utf-8
+	encoding = utf-8
 [i18n]
-    commitencoding = utf-8
-    logoutputencoding = utf-8
+	commitencoding = utf-8
+	logoutputencoding = utf-8
 [help]
-    autocorrect = 1
+	autocorrect = 1
