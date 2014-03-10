@@ -16,6 +16,7 @@
 	df = diff
 	dfs = diff --stat --summary
 	fh = fetch
+	fhu = fetch upstream
 	mg = merge
 	rb = rebase
 	rba = rebase --abort
