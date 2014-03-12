@@ -25,9 +25,12 @@ First :
 `curl -kO https://raw.github.com/PeterDaveHello/Unitial/master/setup.sh`
 
 Second :
+`chmod +x setup.sh`
+
+Third :
 `./setup.sh`
 
-PS : If you are using FreeBSD, please use "fetch" instead of "curl -kO", and give it execute permission by yourself, like chmod +x setup.sh)
+PS : If you are using FreeBSD, please use "fetch" instead of "curl -kO"
 
 And all works will be done in seconds.
 
