@@ -30,7 +30,7 @@ Second :
 Third :
 `./setup.sh`
 
-PS : If you are using FreeBSD, please use "fetch" instead of "curl -kO"
+PS : If you are using FreeBSD, please use "fetch" instead of "curl -kO", in case that you don't have curl to use
 
 And all works will be done in seconds.
 
@@ -54,7 +54,7 @@ Vim :
 useful setting, status bar and comfortable color scheme
 
 Git :
-useful alias and setting, auto completion in BASH
+useful alias and setting, auto completion, diff-highlight
 
 SSH :
 useful setting
