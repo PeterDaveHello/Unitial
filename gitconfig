@@ -29,6 +29,7 @@
 	rmtau = remote add upstream
 	rs = reset
 	rsh = reset --hard
+	rv = revert
 	pl = pull
 	plr = pull --rebase
 	ps = push
