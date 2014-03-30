@@ -22,7 +22,7 @@ Any question and suggestion, please let me know, thanks.
 How to use it?
 ==============
 First :
-`curl -kO https://raw.github.com/PeterDaveHello/Unitial/master/setup.sh`
+`curl -kO https://raw.githubusercontent.com/PeterDaveHello/Unitial/master/setup.sh`
 
 Second :
 `chmod +x setup.sh`
