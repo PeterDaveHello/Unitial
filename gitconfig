@@ -10,6 +10,7 @@
 	chpc = cherry-pick --continue
 	ci = commit -v
 	cia = commit -v --amend
+	cim = commit -m
 	cl = clone
 	co = checkout
 	cob = checkout -b
