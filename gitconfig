@@ -53,6 +53,7 @@
 	excludesfile = ~/.gitignore_global
 	pager = ~/.git/contrib/diff-highlight | less
 	preloadindex = true
+	autocrlf = false
 [mergetool]
 	keepBackup = false
 [gui]
