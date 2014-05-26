@@ -5,6 +5,10 @@ unalias -a
 #don't save duplicates records and lines started with space in bash history
 HISTCONTROL=ignoreboth
 
+#expand the history size
+HISTFILESIZE=2000
+HISTSIZE=1000
+
 #set default charset and language
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
