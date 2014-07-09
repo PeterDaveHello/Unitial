@@ -19,6 +19,15 @@ If you are interesting in the very small project, welcome to fork and feedback, 
 Any question and suggestion, please let me know, thanks.
 
 
+Requirement
+===========
+If you are using FreeBSD, there is no additional requirement, please just make sure your `fetch` command works fine.
+
+On other unix environment, please prepare `curl` tool, so that the install script can get other files.
+
+* you can install curl by apt-get, yum or homebrew, pacman, it depends on your operating system.
+
+
 How to use it?
 ==============
 First :
