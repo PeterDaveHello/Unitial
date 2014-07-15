@@ -91,6 +91,7 @@ autocmd FileType html,css,javascript setlocal sw=2 ts=2
 "=== manually setting filetype ==="
 " au, autocommand
 autocmd BufRead,BufNewFile *.plt set filetype=gnuplot
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 "=== IF YOU WANT TO USE THE FOLLOWING FEATURE, PLEASE UNCOMMENT IT BY YOURSELF ==="
 
