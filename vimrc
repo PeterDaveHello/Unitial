@@ -88,6 +88,10 @@ map <C-n> :set nu!<BAR>set nu?<CR>
 autocmd FileType make,gitconfig,gitcommit,apache setlocal et!
 autocmd FileType html,css,javascript setlocal sw=2 ts=2
 
+"=== manually setting filetype ==="
+" au, autocommand
+autocmd BufRead,BufNewFile *.plt set filetype=gnuplot
+
 "=== IF YOU WANT TO USE THE FOLLOWING FEATURE, PLEASE UNCOMMENT IT BY YOURSELF ==="
 
 " remember and go to the last used location automatically.
