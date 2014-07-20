@@ -2,7 +2,7 @@
 AddressFamily inet
 TCPKeepAlive no
 ServerAliveInterval 55
-LogLevel DEBUG
+#LogLevel DEBUG
 
 #reuse connections
 ControlMaster auto
