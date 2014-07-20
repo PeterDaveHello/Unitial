@@ -38,6 +38,7 @@ alias p='ping'
 alias n='nslookup'
 alias d='dig'
 alias t='mtr'
+alias ssh='ssh -v'
 
 #cd
 alias cd..='\cd ..'
