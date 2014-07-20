@@ -3,3 +3,8 @@ AddressFamily inet
 TCPKeepAlive no
 ServerAliveInterval 55
 LogLevel DEBUG
+
+#reuse connections
+ControlMaster auto
+ControlPersist 600
+ControlPath ~/.ssh/.tmp_session/%h_%p_%r

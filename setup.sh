@@ -33,7 +33,7 @@ do
 done
 
 ${download} "$repo_path"ssh_config
-${MKDIR} -p ~/.ssh/
+${MKDIR} -p ~/.ssh/.tmp_session/
 ${CAT} ssh_config >> ~/.ssh/config
 ${RM} ssh_config
 
