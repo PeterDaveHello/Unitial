@@ -46,6 +46,10 @@ alias ssh='ssh -v'
 #cd
 alias cd..='\cd ..'
 alias cd...='\cd ../..'
+alias ..='\cd ..'
+alias ...='\cd ../..'
+alias ....='\cd ../../..'
+alias .....='\cd ../../../..'
 
 #other alias
 alias c='clear'
