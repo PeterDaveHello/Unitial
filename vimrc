@@ -82,6 +82,10 @@ highlight SpecialKey guifg=DarkGray
 
 " map hot key <Ctrl>+n to switch if shows line numbers
 map <C-n> :set nu!<BAR>set nu?<CR>
+" map hot key <Ctrl>+h to switch if highlights current working column
+map <C-g> :set cursorcolumn!<BAR>set cursorcolumn?<CR>
+" map hot key <Ctrl>+h to switch if highlights current working line
+map <C-h> :set cursorline!<BAR>set cursorline?<CR>
 
 "=== setting depends on filetype  ==="
 " au, autocommand
