@@ -29,6 +29,7 @@
 	rmta = remote add
 	rmtau = remote add upstream
 	rs = reset
+	rst = reset
 	rsh = reset --hard
 	rv = revert
 	pl = pull
