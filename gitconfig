@@ -64,3 +64,5 @@
 	logoutputencoding = utf-8
 [help]
 	autocorrect = 1
+[credential]
+	helper = cache --timeout=600
