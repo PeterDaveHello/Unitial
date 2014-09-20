@@ -67,6 +67,9 @@ set foldlevel=5       "fdl default fold level
 " enable mouse in all mode
 " set mouse=a
 
+" hichlight current line
+set cursorline
+
 " highlight syntax
 syntax on
 
