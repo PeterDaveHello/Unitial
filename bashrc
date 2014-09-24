@@ -9,6 +9,8 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=2000
 HISTSIZE=1000
 
+export PATH=~/bin:"$PATH"
+
 #set default charset and language
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
