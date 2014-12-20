@@ -2,7 +2,8 @@
 " charset
 set encoding=utf-8                   "enc, vim buffer charset, NOT the file's charset
 set fileencoding=utf-8               "fenc, default save charset
-set fileencodings=utf-8,big5,default "fencs, default opening charset priority (as auto detection)
+"fencs, default opening charset priority (as auto detection)
+set fileencodings=utf-8,gb2312,gb18030,gbk,big5,default
 
 " enable features which are not Vi compatible but really really nice.
 set nocompatible  "nocp
