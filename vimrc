@@ -63,6 +63,9 @@ set statusline+=\ %a            "if open multiple files, show current file and a
 " display a status line at the bottom of the window
 set laststatus=2 "ls
 
+" show as much as possible of the last line, instead of '@' symbol
+set display+=lastline
+
 " set code folding feature
 set foldmethod=indent "fdm
 set foldnestmax=5     "fdn max fold level
