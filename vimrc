@@ -91,7 +91,7 @@ set listchars=tab:>-,trail:·
 highlight SpecialKey guifg=DarkGray
 
 " map hot key <Ctrl>+m to switch paste mode
-map <C-m> :set paste!<BAR>set paste?<CR>
+map <C-o> :set paste!<BAR>set paste?<CR>
 " map hot key <Ctrl>+n to switch if shows line numbers
 map <C-n> :set nu!<BAR>set nu?<CR>
 " map hot key <Ctrl>+h to switch if highlights current working column
