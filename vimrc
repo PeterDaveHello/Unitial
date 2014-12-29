@@ -8,6 +8,9 @@ set fileencodings=utf-8,gb2312,gb18030,gbk,big5,default
 " enable features which are not Vi compatible but really really nice.
 set nocompatible  "nocp
 
+" default no bomb for utf-8
+set nobomb
+
 " expand TABs to spaces
 set expandtab     "et
 " set TAB's width
