@@ -70,3 +70,5 @@
 	rebase = true
 [branch "dev"]
 	rebase = true
+[branch]
+	autosetuprebase = always
