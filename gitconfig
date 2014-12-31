@@ -40,10 +40,12 @@
 	st = status
 	lg = log
 	lgp = log -p
+	lgpw = log -p -w
 	lgs = log --stat --summary
 	lgt = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset'
 	lgf = log --follow
 	lgpf = log -p --follow
+	lgpwf = log -p -w --follow
 	lgsf = log --stat --summary --follow
 	lgtf = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset' --follow
 [push]
