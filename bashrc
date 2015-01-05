@@ -9,7 +9,7 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=2000
 HISTSIZE=1000
 
-export PATH=~/bin:"$PATH"
+export PATH="~/bin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:$PATH"
 
 #set default charset and language
 export LANG=en_US.UTF-8
