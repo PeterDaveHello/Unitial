@@ -32,6 +32,9 @@ do
     ${RM} "$files"
 done
 
+${MKDIR} -p ~/.irssi/
+${download_o} ~/.irssi/config "$repo_path"irssi_config
+
 ${download} "$repo_path"ssh_config
 ${MKDIR} -p -m 700 ~/.ssh/.tmp_session/
 ${CAT} ssh_config >> ~/.ssh/config

@@ -1,0 +1,23 @@
+servers = (
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.oftc.net";
+    chatnet = "oftc";
+    port = "6667";
+    autoconnect = "no";
+  }
+);
+
+chatnets = {
+  freenode = { type = "IRC"; };
+  oftc = { type = "IRC"; };
+};
+
+channels = (
+  { name = "#freenode"; chatnet = "freenode"; autojoin = "No"; },
+);
