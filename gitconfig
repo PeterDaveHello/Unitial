@@ -12,6 +12,7 @@
 	cia = commit -v --amend
 	cim = commit -m
 	cl = clone
+	cl1 = clone --depth 1
 	co = checkout
 	cob = checkout -b
 	df = diff
