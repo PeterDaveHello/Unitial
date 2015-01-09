@@ -5,7 +5,8 @@ CHMOD="/bin/chmod"
 MKDIR="/bin/mkdir"
 RM="/bin/rm"
 
-repo_path='https://raw.githubusercontent.com/PeterDaveHello/Unitial/master/'
+github_base='https://raw.githubusercontent.com/'
+repo_path='PeterDaveHello/Unitial/master/'
 
 os=`uname`
 if [ $os = "FreeBSD" ];then
@@ -27,15 +28,15 @@ ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working en
 ${ECHO} -e "\n\e[1;36;40mDownload and setup configs from server...\n\e[0m";
 for files in gitconfig tcshrc bashrc bash_profile inputrc vimrc zshrc gitignore_global tmux.conf
 do
-    ${download} "$repo_path""$files"
+    ${download} "$github_base""$repo_path""$files"
     ${CAT} "$files" >> ~/."$files"
     ${RM} "$files"
 done
 
 ${MKDIR} -p ~/.irssi/
-${download_o} ~/.irssi/config "$repo_path"irssi_config
+${download_o} ~/.irssi/config "$github_base""$repo_path"irssi_config
 
-${download} "$repo_path"ssh_config
+${download} "$github_base""$repo_path"ssh_config
 ${MKDIR} -p -m 700 ~/.ssh/.tmp_session/
 ${CAT} ssh_config >> ~/.ssh/config
 ${RM} ssh_config
