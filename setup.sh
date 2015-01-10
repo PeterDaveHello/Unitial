@@ -64,13 +64,13 @@ fi
 
 ${ECHO} -e "\n\e[1;36;40mDownload VIM color scheme - Kolor from server...\n\e[0m";
 ${MKDIR} -p ~/.vim/colors/
-${download_o} ~/.vim/colors/kolor.vim https://raw.githubusercontent.com/zeis/vim-kolor/master/colors/kolor.vim
+${download_o} ~/.vim/colors/kolor.vim "$github_base"zeis/vim-kolor/master/colors/kolor.vim
 ${ECHO} -e "\n\e[1;36;40mDownload git contrib - diff-highlight from server...\n\e[0m";
 ${MKDIR} -p ~/.git/contrib/
-${download_o} ~/.git/contrib/diff-highlight https://raw.githubusercontent.com/git/git/master/contrib/diff-highlight/diff-highlight
+${download_o} ~/.git/contrib/diff-highlight "$github_base"git/git/master/contrib/diff-highlight/diff-highlight
 ${CHMOD} +x ~/.git/contrib/diff-highlight
 ${ECHO} -e "\n\e[1;36;40mDownload git's auto completion configs from server...\n\e[0m";
-git_auto_complete_path='https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.'
+git_auto_complete_path="$github_base"'git/git/master/contrib/completion/git-completion.'
 ${download_o} ~/.git-completion.bash "$git_auto_complete_path"bash
 ${download_o} ~/.git-completion.tcsh "$git_auto_complete_path"tcsh
 ${download_o} ~/.git-completion.zsh "$git_auto_complete_path"zsh
