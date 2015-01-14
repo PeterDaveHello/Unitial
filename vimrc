@@ -90,6 +90,11 @@ set list
 set listchars=tab:>-,trail:·
 highlight SpecialKey guifg=DarkGray
 
+" set temp dirs, can speedup 100x when working on fuse via internet or nfs
+"set backupdir=~/.vim/bak/
+"set directory=~/.vim/swp/
+"set undodir=~/.vim/undo/
+
 " map hot key <Ctrl>+m to switch paste mode
 map <C-o> :set paste!<BAR>set paste?<CR>
 " map hot key <Ctrl>+n to switch if shows line numbers

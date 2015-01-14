@@ -34,7 +34,7 @@ do
     ${RM} "$files"
 done
 
-${MKDIR} -p ~/.irssi/ ~/.git/contrib/ ~/.vim/colors/
+${MKDIR} -p ~/.irssi/ ~/.git/contrib/ ~/.vim/colors/ ~/.vim/swp/ ~/.vim/bak/ ~/.vim/undo/
 
 ${download_o} ~/.irssi/config "$github_base""$repo_path"irssi_config
 
