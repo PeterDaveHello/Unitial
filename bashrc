@@ -81,6 +81,17 @@ fi
 use_color=false
 safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
 match_lhs=""
+
+function returncode
+{
+    returncode=$?
+    if [ $returncode != 0 ]; then
+        echo "[$returncode]"
+    else
+        echo ""
+    fi
+}
+
 [[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
 [[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
 [[ -z ${match_lhs}    ]] \
@@ -101,15 +112,15 @@ if ${use_color} ; then
     fi
 
     if [[ ${EUID} == 0 ]] ; then
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] \[\033[0;31m\]$(returncode)\[\033[0;37m\]'
     else
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] \[\033[0;31m\]$(returncode)\[\033[0;37m\]'
     fi
 else
     if [[ ${EUID} == 0 ]] ; then
         # show root@ when we don't have colors
-        PS1='\u@\h \W \$ '
+        PS1='\u@\h \W \$ $(returncode)'
     else
-        PS1='\u@\h \w \$ '
+        PS1='\u@\h \w \$ $(returncode)'
     fi
 fi
