@@ -120,6 +120,7 @@ autocmd FileType html,css,javascript setlocal sw=2 ts=2
 autocmd BufRead,BufNewFile *.plt set filetype=gnuplot
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile named.conf* set filetype=named
+autocmd BufRead,BufNewFile *.pac set filetype=javascript
 
 "=== IF YOU WANT TO USE THE FOLLOWING FEATURE, PLEASE UNCOMMENT IT BY YOURSELF ==="
 
