@@ -104,6 +104,12 @@ map <C-g> :set cursorcolumn!<BAR>set cursorcolumn?<CR>
 " map hot key <Ctrl>+h to switch if highlights current working line
 map <C-h> :set cursorline!<BAR>set cursorline?<CR>
 
+" map tab / shift-tab to add/remove indent in normal & visual modes
+nmap <tab>   v>
+nmap <s-tab> v<
+vmap <tab>   >gv
+vmap <s-tab> <gv
+
 "=== setting depends on filetype  ==="
 " au, autocommand
 autocmd FileType make,gitconfig,gitcommit,apache setlocal et!
