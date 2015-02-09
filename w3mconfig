@@ -1,0 +1,11 @@
+visited_color magenta
+visited_anchor 1
+active_color cyan
+active_style 1
+bg_color terminal
+mark_color cyan
+form_color red
+image_color green
+anchor_color cyan
+basic_color terminal
+color 1
