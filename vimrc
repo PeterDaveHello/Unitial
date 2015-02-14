@@ -120,6 +120,7 @@ autocmd FileType html,css,javascript setlocal sw=2 ts=2
 
 "=== manually setting filetype ==="
 " au, autocommand
+autocmd BufRead,BufNewFile *.cpp set filetype=cpp
 autocmd BufRead,BufNewFile *.plt set filetype=gnuplot
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile named.conf* set filetype=named
