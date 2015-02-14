@@ -126,6 +126,12 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile named.conf* set filetype=named
 autocmd BufRead,BufNewFile *.pac set filetype=javascript
 
+" set makeprg(depends on filetype) if makefile is not exist
+if !filereadable('makefile') || !filereadable('Makefile')
+    autocmd FileType c setlocal makeprg=gcc\ %\ -o\ %<
+    autocmd FileType cpp setlocal makeprg=g++\ %\ -o\ %<
+endif
+
 "=== IF YOU WANT TO USE THE FOLLOWING FEATURE, PLEASE UNCOMMENT IT BY YOURSELF ==="
 
 " remember and go to the last used location automatically.
