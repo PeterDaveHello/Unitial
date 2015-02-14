@@ -132,6 +132,9 @@ if !filereadable('makefile') || !filereadable('Makefile')
     autocmd FileType cpp setlocal makeprg=g++\ %\ -o\ %<
 endif
 
+" set Netrw's default style to tree style listing
+let g:netrw_liststyle=3
+
 "=== IF YOU WANT TO USE THE FOLLOWING FEATURE, PLEASE UNCOMMENT IT BY YOURSELF ==="
 
 " remember and go to the last used location automatically.
