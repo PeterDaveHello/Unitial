@@ -117,6 +117,8 @@ vmap <s-tab> <gv
 map <F9> :w <CR> :make <CR>
 " map F10 to execute filename(without ext.) as external command (usually for c & cpp)
 map <F10> :!./%< <CR>
+" map F11 = F9 + F10
+map <F11> :w <CR> :make <CR> :!./%< <CR>
 
 "=== setting depends on filetype  ==="
 " au, autocommand
