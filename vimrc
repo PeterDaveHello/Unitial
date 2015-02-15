@@ -72,7 +72,7 @@ set foldnestmax=5     "fdn max fold level
 set foldlevel=5       "fdl default fold level
 
 " set scroll offset(the min number of lines above and below cursor) to 2
-set scrolloff=2
+set scrolloff=2       "so
 
 " enable mouse in all mode
 " set mouse=a
