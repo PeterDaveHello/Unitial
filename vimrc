@@ -113,8 +113,8 @@ nmap <s-tab> v<
 vmap <tab>   >gv
 vmap <s-tab> <gv
 
-" map F5 to make
-map <F5> :make <CR>
+" map F5 to save and make
+map <F5> :w <CR> :make <CR>
 
 "=== setting depends on filetype  ==="
 " au, autocommand
