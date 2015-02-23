@@ -2,7 +2,7 @@
 [color]
 	ui = true
 [alias]
-	ad = add .
+	ad = add --all
 	br = branch
 	bl = blame
 	chp = cherry-pick
