@@ -138,6 +138,7 @@ if !filereadable('makefile') && !filereadable('Makefile')
     autocmd FileType c setlocal makeprg=gcc\ %\ -o\ %<
     autocmd FileType cpp setlocal makeprg=g++\ %\ -o\ %<
     autocmd FileType sh setlocal makeprg=bash\ -n\ %
+    autocmd FileType php setlocal makeprg=php\ -l\ %
 endif
 
 " set Netrw's default style to tree style listing
