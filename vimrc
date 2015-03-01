@@ -137,6 +137,7 @@ autocmd BufRead,BufNewFile *.pac set filetype=javascript
 if !filereadable('makefile') && !filereadable('Makefile')
     autocmd FileType c setlocal makeprg=gcc\ %\ -o\ %<
     autocmd FileType cpp setlocal makeprg=g++\ %\ -o\ %<
+    autocmd FileType sh setlocal makeprg=bash\ -n\ %
 endif
 
 " set Netrw's default style to tree style listing
