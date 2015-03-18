@@ -34,6 +34,7 @@
 	rst = reset
 	rsh = reset --hard
 	rv = revert
+	rvt = revert
 	pl = pull
 	plr = pull --rebase
 	ps = push
