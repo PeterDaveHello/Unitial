@@ -1,3 +1,5 @@
 
 *.swp
 *.nfs.*
+*.out
+*.exe
