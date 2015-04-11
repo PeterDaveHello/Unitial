@@ -4,6 +4,7 @@ CAT="/bin/cat"
 CHMOD="/bin/chmod"
 MKDIR="/bin/mkdir"
 RM="/bin/rm"
+MV="/bin/mv"
 
 github_base='https://cdn.rawgit.com/'
 #github_base='https://raw.githubusercontent.com/'
@@ -37,6 +38,10 @@ done
 ${MKDIR} -p ~/.irssi/ ~/.git/contrib/ ~/.vim/colors/ ~/.vim/swp/ ~/.vim/bak/ ~/.vim/undo/
 
 ${download_o} ~/.irssi/config "$github_base""$repo_path"irssi_config
+
+${download} "$github_base""$repo_path"gtab.list
+${MKDIR} -p ~/.gcin/
+${MV} gtab.list ~/.gcin/
 
 ${download} "$github_base""$repo_path"ssh_config
 ${MKDIR} -p -m 700 ~/.ssh/.tmp_session/
