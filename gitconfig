@@ -51,6 +51,9 @@
 	lgpwf = log -p -w --follow
 	lgsf = log --stat --summary --follow
 	lgtf = log --abbrev-commit --decorate --graph --color --pretty='format:%C(yellow)%h %Creset%s %C(magenta)%an %C(green)%ar %Creset' --follow
+	pushall = "!fn(){ for a in `git remote`; do git push $a $(git rev-parse --abbrev-ref HEAD); done; };fn"
+	pullall = "!fn(){ for a in `git remote`; do git pull $a $(git rev-parse --abbrev-ref HEAD); done; };fn"
+	fetchall = "!fn(){ for a in `git remote`; do git fetch $a; done; };fn"
 [push]
 	# for only push to current branch
 	default = tracking
