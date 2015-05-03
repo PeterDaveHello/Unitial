@@ -16,7 +16,9 @@
 	co = checkout
 	cob = checkout -b
 	df = diff
+	dfc = diff --cached
 	dfw = diff -w
+	dfcw = diff --cached -w
 	dfs = diff --stat --summary
 	fh = fetch
 	fhu = fetch upstream
