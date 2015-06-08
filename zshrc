@@ -60,3 +60,5 @@ alias free='\free -h'
 alias wgetncc='wget --no-check-certificate'
 
 ###alias###
+
+source ~/.colorEcho

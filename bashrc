@@ -133,3 +133,5 @@ if ! shopt -oq posix; then
         source "/usr/local/share/bash-completion/bash_completion"
     fi
 fi
+
+source ~/.colorEcho
