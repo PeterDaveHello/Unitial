@@ -39,7 +39,7 @@ ${MKDIR} -p ~/.irssi/ ~/.git/contrib/ ~/.vim/colors/ ~/.vim/swp/ ~/.vim/bak/ ~/.
 
 ${download_o} ~/.irssi/config "$github_base""$repo_path"irssi_config
 
-${download_o} ~/.colorEcho "$github_base""PeterDaveHello/ColorEchoForShell/master/dist/colorEcho.sh"
+${download_o} ~/.colorEcho "$github_base""PeterDaveHello/ColorEchoForShell/master/dist/ColorEcho.bash"
 
 ${download} "$github_base""$repo_path"gtab.list
 ${MKDIR} -p ~/.gcin/
