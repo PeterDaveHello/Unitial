@@ -6,8 +6,7 @@ MKDIR="/bin/mkdir"
 RM="/bin/rm"
 MV="/bin/mv"
 
-github_base='https://cdn.rawgit.com/'
-#github_base='https://raw.githubusercontent.com/'
+github_base='https://raw.githubusercontent.com/'
 repo_path='PeterDaveHello/Unitial/master/'
 
 os=`uname`
