@@ -88,3 +88,5 @@
 	#insteadOf = git://github.com/
 	#insteadOf = http://github.com/
 	#insteadOf = https://github.com/
+[grep]
+	lineNumber = true
