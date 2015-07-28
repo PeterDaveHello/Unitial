@@ -68,6 +68,7 @@ alias du='\du -h'
 alias df='\df -hT'
 alias free='\free -h'
 alias wgetncc='wget --no-check-certificate'
+alias last='\last | less'
 
 ###alias###
 
