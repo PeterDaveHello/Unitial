@@ -43,6 +43,7 @@
 	sh = stash
 	sm = submodule
 	st = status
+	serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 	lg = log
 	lgp = log -p
 	lgpw = log -p -w
