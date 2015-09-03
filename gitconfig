@@ -68,6 +68,7 @@
 	preloadindex = true
 	autocrlf = false
 	ignorecase = false
+	fscache = true
 [mergetool]
 	keepBackup = false
 [gui]
