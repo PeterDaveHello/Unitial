@@ -54,6 +54,7 @@ alias .....='\cd ../../../..'
 #other alias
 alias c='clear'
 alias sudo='\sudo -E'
+alias less='\less -R'
 alias df='\df -hT'
 alias du='\du -h'
 alias free='\free -h'
