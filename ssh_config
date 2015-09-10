@@ -1,12 +1,12 @@
+Host *
+    GSSAPIAuthentication no
+    AddressFamily inet
+    TCPKeepAlive yes
+    ServerAliveInterval 55
+    Compression yes
+    #LogLevel DEBUG
 
-GSSAPIAuthentication no
-AddressFamily inet
-TCPKeepAlive yes
-ServerAliveInterval 55
-Compression yes
-#LogLevel DEBUG
-
-#reuse connections
-ControlMaster auto
-ControlPersist 600
-ControlPath ~/.ssh/.tmp_session/%h_%p_%r
+    #reuse connections
+    ControlMaster auto
+    ControlPersist 600
+    ControlPath ~/.ssh/.tmp_session/%h_%p_%r
