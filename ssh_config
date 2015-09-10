@@ -3,6 +3,7 @@ GSSAPIAuthentication no
 AddressFamily inet
 TCPKeepAlive yes
 ServerAliveInterval 55
+Compression yes
 #LogLevel DEBUG
 
 #reuse connections
