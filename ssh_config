@@ -1,7 +1,7 @@
 
 GSSAPIAuthentication no
 AddressFamily inet
-TCPKeepAlive no
+TCPKeepAlive yes
 ServerAliveInterval 55
 #LogLevel DEBUG
 
