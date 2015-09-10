@@ -1,6 +1,6 @@
 
 [color]
-	ui = true
+	ui = always
 [alias]
 	ad = add --all .
 	br = branch
