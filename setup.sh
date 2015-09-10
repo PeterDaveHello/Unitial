@@ -54,8 +54,8 @@ if [ $os = "FreeBSD" ] || [ $os = "Darwin" ];then
     ${ECHO} -e "\n#color setting\nalias ls='\ls -F'" >> ~/.zshrc
     ${ECHO} -e "\n#color setting\nalias ls '\ls -F'" >> ~/.tcshrc
 else
-    ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.zshrc
-    ${ECHO} -e "\n#color setting\nalias ls '\ls -F --color=auto'" >> ~/.tcshrc
+    ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=always'" >> ~/.zshrc
+    ${ECHO} -e "\n#color setting\nalias ls '\ls -F --color=always'" >> ~/.tcshrc
 fi
 
 if [ $os = "FreeBSD" ];then
