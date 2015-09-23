@@ -91,6 +91,16 @@ if [ -e ~/.git-completion.bash ]; then
     source ~/.git-completion.bash
 fi
 
+function repeat()
+{
+    i=$1
+    shift
+    for n in $(seq $i)
+    do
+        $@
+    done
+}
+
 # bashrc ref to linuxmint 17.1's default /etc/bash.bashrc
 use_color=true #'cause this detection not work on FreeBSD(10.1), force enable for a short time
 safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
