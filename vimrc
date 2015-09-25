@@ -50,6 +50,9 @@ set ttyfast "tf
 " don't redrawnscreen  while executing macros, registers and other commands
 set lazyredraw "lz
 
+" enable window title
+set title
+
 " set statusbar
 set statusline+=%f              "filename
 set statusline+=%m              "modified flag
