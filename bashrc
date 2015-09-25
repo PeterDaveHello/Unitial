@@ -1,4 +1,7 @@
 
+#append command history instead of overwrite
+shopt -s histappend
+
 #unalias all the alias(es) before set anything
 unalias -a
 
