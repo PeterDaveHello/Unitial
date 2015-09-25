@@ -77,7 +77,7 @@
 	commitencoding = utf-8
 	logoutputencoding = utf-8
 [help]
-	autocorrect = 1
+	autocorrect = 10
 [credential]
 	helper = cache --timeout=600
 [branch "master"]
