@@ -47,6 +47,9 @@ set fileformats=unix,dos,mac "ffs
 " indicates a fast terminal connection
 set ttyfast "tf
 
+" don't redrawnscreen  while executing macros, registers and other commands
+set lazyredraw "lz
+
 " set statusbar
 set statusline+=%f              "filename
 set statusline+=%m              "modified flag
