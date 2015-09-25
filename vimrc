@@ -44,6 +44,9 @@ set backspace=2   "bs
 " file formats priority when try to read a file
 set fileformats=unix,dos,mac "ffs
 
+" indicates a fast terminal connection
+set ttyfast "tf
+
 " set statusbar
 set statusline+=%f              "filename
 set statusline+=%m              "modified flag
