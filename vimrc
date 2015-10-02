@@ -53,6 +53,9 @@ set lazyredraw "lz
 " enable window title
 set title
 
+" set windows title back to path instead of default 'Thanks for Flying Vim'
+let &titleold=getcwd()
+
 " set statusbar
 set statusline+=%f              "filename
 set statusline+=%m              "modified flag
