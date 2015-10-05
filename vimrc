@@ -136,6 +136,7 @@ map <F11> :w <CR> :make <CR> :!./%< <CR>
 " au, autocommand
 autocmd FileType make,gitconfig,gitcommit,apache setlocal et!
 autocmd FileType html,css,javascript setlocal sw=2 ts=2
+autocmd FileType fstab setlocal sw= ts=8
 
 "=== manually setting filetype ==="
 " au, autocommand
