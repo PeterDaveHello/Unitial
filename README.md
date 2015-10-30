@@ -30,16 +30,9 @@ On other unix environment, please prepare `curl` tool, so that the install scrip
 
 How to use it?
 ==============
-First :
-`curl -kO https://raw.githubusercontent.com/PeterDaveHello/Unitial/master/setup.sh`
+`curl -L -o- https://goo.gl/FGs2Fu | bash`
 
-Second :
-`chmod +x setup.sh`
-
-Third :
-`./setup.sh`
-
-PS : If you are using FreeBSD, please use "fetch" instead of "curl -kO", in case that you don't have curl to use
+PS : If you are using FreeBSD, please use "fetch" instead of "curl", in case that you don't have curl to use
 
 And all works will be done in seconds.
 
