@@ -28,7 +28,7 @@ On other unix environment, please prepare `curl` tool, so that the install scrip
 * you can install curl by apt-get, yum or homebrew, pacman, it depends on your operating system.
 
 
-How to use it?
+Installation
 ==============
 
 Install by this one line comman:
