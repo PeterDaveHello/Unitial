@@ -30,7 +30,12 @@ On other unix environment, please prepare `curl` tool, so that the install scrip
 
 How to use it?
 ==============
-`curl -L -o- https://goo.gl/FGs2Fu | bash`
+
+Install by this one line comman:
+
+```sh
+curl -L -o- https://goo.gl/FGs2Fu | bash
+```
 
 PS : If you are using FreeBSD, please use "fetch" instead of "curl", in case that you don't have curl to use
 
