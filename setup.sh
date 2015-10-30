@@ -81,8 +81,4 @@ if [ $os = "FreeBSD" ] && [ -r /usr/local/share/certs/ca-root-nss.crt ];then
     ${ECHO} -e "\nca-certificate=/usr/local/share/certs/ca-root-nss.crt" >> ~/.wgetrc
 fi
 
-if [ "$SHELL" = "/bin/bash" ] || [ "$SHELL" = "/usr/local/bin/bash" ] ; then
-    . ~/.bashrc
-fi
-
 ${ECHO} -e "\n\e[1;36;40mUnitial installation was finished!\n\nPlease terminate all other works and restart your shell or re-login.\n\e[0m";
