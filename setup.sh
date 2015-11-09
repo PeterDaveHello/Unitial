@@ -34,9 +34,10 @@ do
     ${RM} "$files"
 done
 
-${MKDIR} -p ~/.irssi/ ~/.git/contrib/ ~/.vim/colors/ ~/.vim/swp/ ~/.vim/bak/ ~/.vim/undo/
+${MKDIR} -p ~/.irssi/ ~/.git/contrib/ ~/.vim/colors/ ~/.vim/swp/ ~/.vim/bak/ ~/.vim/undo/ ~/.aria2/
 
 ${download_o} ~/.irssi/config "$github_base""$repo_path"irssi_config
+${download_o} ~/.aria2/aria2.conf "$github_base""$repo_path"aria2.conf
 
 ${download_o} ~/.colorEcho "$github_base""PeterDaveHello/ColorEchoForShell/master/dist/ColorEcho.bash"
 
