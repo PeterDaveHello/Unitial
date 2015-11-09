@@ -56,7 +56,6 @@ alias n='nslookup'
 alias d='dig'
 alias t='mtr'
 alias ssh='ssh -v'
-alias aria2c='\aria2c -x 15 -j 15 -s 15 -k 1M'
 
 #cd
 alias cd..='\cd ..'
