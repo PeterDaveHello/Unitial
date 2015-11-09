@@ -78,8 +78,9 @@ ${download_o} ~/.git-completion.tcsh "$git_auto_complete_path"tcsh
 ${download_o} ~/.git-completion.zsh "$git_auto_complete_path"zsh
 
 if [ $os = "FreeBSD" ] && [ -r /usr/local/share/certs/ca-root-nss.crt ];then
-    ${ECHO} -e "\n\e[1;36;40mAdd ca-certificate path for FreeBSD's wget...\n\e[0m";
+    ${ECHO} -e "\n\e[1;36;40mAdd ca-certificate path for FreeBSD's wget & aria2...\n\e[0m";
     ${ECHO} -e "\nca-certificate=/usr/local/share/certs/ca-root-nss.crt" >> ~/.wgetrc
+    ${ECHO} -e "\nca-certificate=/usr/local/share/certs/ca-root-nss.crt" >> ~/.aria2/aria2.conf
 fi
 
 ${ECHO} -e "\n\e[1;36;40mUnitial installation was finished!\n\nPlease terminate all other works and restart your shell or re-login.\n\e[0m";
