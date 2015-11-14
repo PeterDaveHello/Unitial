@@ -31,7 +31,7 @@ On other unix environment, please prepare `curl` tool, so that the install scrip
 Installation
 ==============
 
-Install by this one line comman:
+Install by this one line command:
 
 ```sh
 curl -L -o- https://goo.gl/FGs2Fu | bash
