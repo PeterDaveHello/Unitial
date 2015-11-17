@@ -61,10 +61,19 @@ Vim :
 useful setting, status bar and comfortable color scheme
 
 Git :
-useful alias and setting, auto completion, diff-highlight
+useful alias and setting, gitignore(global), auto completion, diff-highlight
 
 SSH :
-useful setting
+useful setting, including optimization for X11 forwarding, TCPKeepalicve, compression, and multiplexing!
+
+irssi:
+connection info for oftc and freenode, channel config example
+
+tmux:
+Useful status bar including avg load, color adjusment
+
+w3m:
+color adjusment
 
 Notes
 =====
