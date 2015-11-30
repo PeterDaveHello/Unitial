@@ -19,6 +19,7 @@ export PATH="~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 #set default charset and language
 locale=en_US.UTF-8
 export LANG=$locale
+export LANGUAGE=$locale
 export LC_ALL=$locale
 
 #set default editor
