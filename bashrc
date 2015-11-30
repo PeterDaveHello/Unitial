@@ -17,8 +17,9 @@ PROMPT_DIRTRIM=5
 export PATH="~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 
 #set default charset and language
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+locale=en_US.UTF-8
+export LANG=$locale
+export LC_ALL=$locale
 
 #set default editor
 export EDITOR=vim
