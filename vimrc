@@ -135,7 +135,7 @@ map <F11> :w <CR> :make <CR> :!./%< <CR>
 "=== setting depends on filetype  ==="
 " au, autocommand
 autocmd FileType make,gitconfig,gitcommit,apache setlocal et!
-autocmd FileType gitcommit setlocal cc=50,72 | highlight ColorColumn ctermbg=cyan
+autocmd FileType gitcommit setlocal cc=50,72 | setlocal textwidth=75 | highlight ColorColumn ctermbg=cyan
 autocmd FileType html,css,javascript setlocal sw=2 ts=2
 autocmd FileType fstab setlocal sw=8 ts=8
 
