@@ -32,7 +32,7 @@ alias tmux='\tmux -2'
 os=`uname`
 if [ $os = "FreeBSD" ] || [ $os = "Darwin" ];then
     alias ls='\ls -F'
-    alias free='\freecolor -t'
+    alias free='\freecolor -tm'
     export CLICOLOR='yes'
     export LSCOLORS='gxfxcxdxbxegedabagacad'
 else
