@@ -117,7 +117,7 @@ function returncode
 {
     returncode=$?
     if [ $returncode != 0 ]; then
-        echo "[$returncode]"
+        echo "[$returncode @ `date`]"
     else
         echo ""
     fi
