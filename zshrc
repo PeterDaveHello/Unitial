@@ -32,9 +32,9 @@ alias la='ls -A'
 alias lal='ls -lha'
 
 #grep
-alias grep='\grep -Hn --color=auto'
-alias fgrep='\fgrep -Hn --color=auto'
-alias egrep='\egrep -Hn --color=auto'
+alias grep='\grep -n --color=auto'
+alias fgrep='\fgrep -n --color=auto'
+alias egrep='\egrep -n --color=auto'
 
 #network tool
 alias p='ping'
