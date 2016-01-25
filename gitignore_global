@@ -1,5 +1,5 @@
 
-*.swp
+.*.sw[a-z]
 *.nfs.*
 *.out
 *.exe
