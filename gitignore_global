@@ -3,3 +3,5 @@
 *.nfs.*
 *.out
 *.exe
+
+.DS_Store
