@@ -47,6 +47,7 @@ ${MV} gtab.list ~/.gcin/
 
 ${download} "$github_base""$repo_path"ssh_config
 ${MKDIR} -p -m 700 ~/.ssh/.tmp_session/
+${CHMOD} 700 ~/.ssh/
 ${CAT} ssh_config >> ~/.ssh/config
 ${RM} ssh_config
 
