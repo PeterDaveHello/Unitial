@@ -5,6 +5,7 @@ CHMOD="/bin/chmod"
 MKDIR="/bin/mkdir"
 RM="/bin/rm"
 MV="/bin/mv"
+TOUCH="/usr/bin/touch"
 
 github_base='https://raw.githubusercontent.com/'
 repo_path='PeterDaveHello/Unitial/master/'
@@ -49,7 +50,8 @@ ${download} "$github_base""$repo_path"ssh_config
 ${MKDIR} -p -m 700 ~/.ssh/.tmp_session/
 ${CHMOD} 700 ~/.ssh/
 ${CAT} ssh_config >> ~/.ssh/config
-${CHMOD} 600 ~/.ssh/config
+${TOUCH} ~/.ssh/authorized_keys
+${CHMOD} 600 ~/.ssh/config ~/.ssh/authorized_keys
 ${RM} ssh_config
 
 ${ECHO} -e "\n\e[1;36;40mAdd some color setting which depends on your OS...\n\e[0m";
