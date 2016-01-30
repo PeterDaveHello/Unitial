@@ -49,6 +49,7 @@ ${download} "$github_base""$repo_path"ssh_config
 ${MKDIR} -p -m 700 ~/.ssh/.tmp_session/
 ${CHMOD} 700 ~/.ssh/
 ${CAT} ssh_config >> ~/.ssh/config
+${CHMOD} 600 ~/.ssh/config
 ${RM} ssh_config
 
 ${ECHO} -e "\n\e[1;36;40mAdd some color setting which depends on your OS...\n\e[0m";
