@@ -80,6 +80,7 @@ alias df='\df -hT'
 alias wgetncc='wget --no-check-certificate'
 alias last='\last | less'
 alias tree='\tree -C'
+alias optipng='\optipng -o7 -zm1-9 -preserve'
 
 ###alias###
 
