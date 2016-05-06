@@ -123,11 +123,6 @@ function man()
     man "$@"
 }
 
-# bashrc ref to linuxmint 17.1's default /etc/bash.bashrc
-use_color=true #'cause this detection not work on FreeBSD(10.1), force enable for a short time
-safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
-match_lhs=""
-
 function returncode
 {
     returncode=$?
@@ -138,25 +133,27 @@ function returncode
     fi
 }
 
-[[ -z ${match_lhs}    ]] \
-        && type -P dircolors >/dev/null \
-        && match_lhs=$(dircolors --print-database)
-[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
 
-if ${use_color} ; then
+function enable-prompt-color()
+{
     if [[ ${EUID} == 0 ]] ; then
         PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;36m\] \w \$\[\033[00m\] \[\033[01;31m\]$(returncode)\[\033[0;37m\]'
     else
         PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;36m\] \w \$\[\033[00m\] \[\033[01;31m\]$(returncode)\[\033[0;37m\]'
     fi
-else
+}
+
+function disable-prompt-color()
+{
     if [[ ${EUID} == 0 ]] ; then
         # show root@ when we don't have colors
         PS1='\u@\h \W \$ $(returncode)'
     else
         PS1='\u@\h \w \$ $(returncode)'
     fi
-fi
+}
+
+enable-prompt-color
 
 # automatically enable bash-completion in interactive shells
 if ! shopt -oq posix; then
