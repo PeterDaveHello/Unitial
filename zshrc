@@ -12,6 +12,9 @@ LC_ALL='en_US.UTF-8'
 #set default editor
 export EDITOR='vim'
 
+#GPG passphrase input workaround
+export GPG_TTY=`tty`
+
 #tmux color issue
 alias tmux='\tmux -2'
 
