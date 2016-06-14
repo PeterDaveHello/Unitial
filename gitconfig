@@ -92,3 +92,5 @@
 	#insteadOf = https://github.com/
 [grep]
 	lineNumber = true
+[diff]
+	compactionHeuristic = true
