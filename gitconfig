@@ -8,9 +8,12 @@
 	chp = cherry-pick
 	chpa = cherry-pick --abort
 	chpc = cherry-pick --continue
-	ci = commit -S -v
-	cia = commit -S -v --amend
-	cim = commit -S -m
+	ci = commit -v
+	cia = commit -v --amend
+	cim = commit -m
+	cis = commit -v -S
+	cias = commit -v --amend -S
+	cims = commit -m -S
 	cl = clone
 	cl1 = clone --depth 1
 	co = checkout
