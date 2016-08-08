@@ -166,6 +166,8 @@ if ! shopt -oq posix; then
         source "/etc/bash_completion"
     elif [ -s "/usr/local/share/bash-completion/bash_completion" ]; then
         source "/usr/local/share/bash-completion/bash_completion"
+    elif [ -s "/usr/local/etc/bash_completion" ]; then
+        source "/usr/local/etc/bash_completion"
     fi
 fi
 
