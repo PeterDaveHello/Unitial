@@ -11,6 +11,9 @@ Host *
     ControlPersist 600
     ControlPath ~/.ssh/.tmp_session/%h_%p_%r
 
+Host ec2-*.compute.amazonaws.com
+    ControlPath ~/.ssh/.tmp_session/%C
+
 Host do.not.use.multiplexing
     ControlMaster no
 
