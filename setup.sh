@@ -26,7 +26,7 @@ else
     ECHO="/bin/echo"
     ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m";
     ${ECHO} -e "\n\e[1;36;40mSuppose you have 'curl' to download files!\n\e[0m";
-    download_o='curl -#ko'
+    download_o='curl -#o'
 fi
 
 
