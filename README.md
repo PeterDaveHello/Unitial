@@ -23,21 +23,29 @@ Requirement
 ===========
 If you are using FreeBSD, there is no additional requirement, please just make sure your `fetch` command works fine.
 
-On other unix environment, please prepare `curl` tool, so that the install script can get other files.
+On other unix environment, please prepare `curl` or `wget`, so that the install script can get other files.
 
-* you can install curl by apt-get, yum or homebrew, pacman, it depends on your operating system.
+* you can install curl and wget by apt-get, yum or homebrew, pacman, it depends on your operating system.
 
 
 Installation
 ==============
 
-Install by this one line command:
+Install by this one line command if you have `curl`:
 
 ```sh
-curl -L -o- https://goo.gl/FGs2Fu | bash
+curl -Lo- https://goo.gl/FGs2Fu | bash
 ```
 
-PS : If you are using FreeBSD, please use "fetch" instead of "curl", in case that you don't have curl to use
+If you don't have `curl` but your have `wget`:
+```sh
+wget  -O- https://goo.gl/FGs2Fu | bash
+```
+
+If you are using FreeBSD without both `wget` and `curl`, try:
+```sh
+fetch -o- https://goo.gl/FGs2Fu | bash
+```
 
 And all works will be done in seconds.
 

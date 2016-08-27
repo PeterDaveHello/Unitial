@@ -25,8 +25,13 @@ if [ "$os" = "FreeBSD" ];then
 else
     ECHO="/bin/echo"
     ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m";
-    ${ECHO} -e "\n\e[1;36;40mSuppose you have 'curl' to download files!\n\e[0m";
-    download_o='curl -#o'
+    if type "curl" > /dev/null 2>&1; then
+        download_o='curl -#o'
+    elif type "wget" > /dev/null 2>&1; then
+        download_o='wget --no-timestamping --no-verbose -O '
+    else
+        echo "Unitial needs 'wget' or 'curl' to download the assets." 1>&2
+    fi
 fi
 
 
