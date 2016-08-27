@@ -4,8 +4,14 @@ CAT="/bin/cat"
 CHMOD="/bin/chmod"
 MKDIR="/bin/mkdir"
 RM="/bin/rm"
-MV="/bin/mv"
 TOUCH="/usr/bin/touch"
+
+TMP_PATH="./"
+if [ ! -w "$(pwd)" ] && [ -w "/tmp/" ]; then
+    TMP_PATH="/tmp/"
+else
+    echo "Please run this setup on a writable directory." 1>&2
+fi
 
 github_base='https://raw.githubusercontent.com/'
 repo_path='PeterDaveHello/Unitial/master/'
@@ -15,24 +21,23 @@ if [ "$os" = "FreeBSD" ];then
     ECHO="echo"
     ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m";
     ${ECHO} -e "\n\e[1;36;40mSuppose you have 'fetch' to download files!\n\e[0m";
-    download='fetch'
     download_o='fetch -o'
 else
     ECHO="/bin/echo"
     ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m";
     ${ECHO} -e "\n\e[1;36;40mSuppose you have 'curl' to download files!\n\e[0m";
-    download='curl -#kO'
     download_o='curl -#ko'
 fi
+
 
 ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working environment\n\nPlease wait...\n\n\e[0m";
 
 ${ECHO} -e "\n\e[1;36;40mDownload and setup configs from server...\n\e[0m";
 for file in gitconfig tcshrc bashrc bash_profile inputrc vimrc zshrc gitignore_global tmux.conf w3mconfig xinputrc wgetrc curlrc tigrc
 do
-    ${download} "${github_base}${repo_path}${file}"
-    ${CAT} "$file" >> ~/."$file"
-    ${RM} "$file"
+    ${download_o} "${TMP_PATH}${file}" "${github_base}${repo_path}${file}"
+    ${CAT} "${TMP_PATH}${file}" >> ~/."$file"
+    ${RM} "${TMP_PATH}${file}"
 done
 
 ${MKDIR} -p ~/.irssi/ ~/.git/contrib/ ~/.vim/colors/ ~/.vim/swp/ ~/.vim/bak/ ~/.vim/undo/ ~/.aria2/
@@ -42,17 +47,16 @@ ${download_o} ~/.aria2/aria2.conf "${github_base}${repo_path}aria2.conf"
 
 ${download_o} ~/.colorEcho "${github_base}PeterDaveHello/ColorEchoForShell/master/dist/ColorEcho.bash"
 
-${download} "${github_base}${repo_path}gtab.list"
 ${MKDIR} -p ~/.gcin/
-${MV} gtab.list ~/.gcin/
+${download_o} ~/.gcin/gtab.list "${github_base}${repo_path}gtab.list"
 
-${download} "${github_base}${repo_path}ssh_config"
+${download_o} "${TMP_PATH}ssh_config" "${github_base}${repo_path}ssh_config"
 ${MKDIR} -p -m 700 ~/.ssh/.tmp_session/
 ${CHMOD} 700 ~/.ssh/
-${CAT} ssh_config >> ~/.ssh/config
+${CAT} "${TMP_PATH}ssh_config" >> ~/.ssh/config
 ${TOUCH} ~/.ssh/authorized_keys
 ${CHMOD} 600 ~/.ssh/config ~/.ssh/authorized_keys
-${RM} ssh_config
+${RM} "${TMP_PATH}ssh_config"
 
 ${ECHO} -e "\n\e[1;36;40mAdd some color setting which depends on your OS...\n\e[0m";
 if [ "$os" = "FreeBSD" ] || [ "$os" = "Darwin" ];then
