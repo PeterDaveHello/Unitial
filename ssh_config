@@ -15,8 +15,11 @@ Host ec2-*.compute.amazonaws.com
     # Note that this "%C" work on OpenSSH v6.7+, so comment out, disablle multiplexing by default.
     # This will generates a hash from the concatenation of %l%h%p%r,
     # SO it'll help if you got "ControlPath domain.blah.blah ... too long for Unix domain socket" problem.
-    #ControlPath ~/.ssh/.tmp_session/%C # Need OpenSSH   v6.7+
-    ControlMaster no                    # For OpenSSH  < v6.7
+
+    # Need OpenSSH   v6.7+ :
+    #ControlPath ~/.ssh/.tmp_session/%C
+    # For OpenSSH  < v6.7  :
+    ControlMaster no
 
 Host do.not.use.multiplexing
     ControlMaster no
