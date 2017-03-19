@@ -26,7 +26,7 @@ else
     ECHO="/bin/echo"
     ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m";
     if type "curl" > /dev/null 2>&1; then
-        download_o='curl -#o'
+        download_o='curl --compressed -#o'
     elif type "wget" > /dev/null 2>&1; then
         download_o='wget --no-timestamping --no-verbose -O '
     else
