@@ -3,15 +3,7 @@
 CAT="/bin/cat"
 CHMOD="/bin/chmod"
 MKDIR="/bin/mkdir"
-RM="/bin/rm"
 TOUCH="/usr/bin/touch"
-
-TMP_PATH="./"
-if [ ! -w "$(pwd)" ] && [ -w "/tmp/" ]; then
-    TMP_PATH="/tmp/"
-else
-    echo "Please run this setup on a writable directory." 1>&2
-fi
 
 github_base='https://raw.githubusercontent.com/'
 repo_path='PeterDaveHello/Unitial/master/'
