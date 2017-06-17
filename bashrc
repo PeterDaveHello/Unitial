@@ -171,4 +171,6 @@ if ! shopt -oq posix; then
     fi
 fi
 
-source ~/.colorEcho
+if [ -r ~/.colorEcho ]; then
+    source ~/.colorEcho
+fi
