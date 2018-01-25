@@ -31,6 +31,9 @@ export GPG_TTY=`tty`
 #tmux color issue
 alias tmux='\tmux -2'
 
+#uniq unicode issue
+alias uniq='LC_ALL=C uniq'
+
 # some setting which depends on OS
 os=`uname`
 if [ $os = "FreeBSD" ] || [ $os = "Darwin" ];then

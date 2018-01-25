@@ -18,6 +18,9 @@ export GPG_TTY=`tty`
 #tmux color issue
 alias tmux='\tmux -2'
 
+#uniq unicode issue
+alias uniq='LC_ALL=C uniq'
+
 ## Completions
 autoload -U compinit
 compinit -C

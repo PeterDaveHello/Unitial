@@ -28,6 +28,9 @@ bindkey -k down history-search-forward
 #tmux color issue
 alias tmux  '\tmux -2'
 
+#uniq unicode issue
+alias uniq  'LC_ALL=C uniq'
+
 
 ###alias###
 
