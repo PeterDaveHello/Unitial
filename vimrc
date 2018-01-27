@@ -146,6 +146,7 @@ autocmd BufRead,BufNewFile *.plt set filetype=gnuplot
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile named.conf* set filetype=named
 autocmd BufRead,BufNewFile *.pac set filetype=javascript
+autocmd BufRead,BufNewFile .php_cs,.php_cs.dist set filetype=php
 
 " set makeprg(depends on filetype) if makefile is not exist
 if !filereadable('makefile') && !filereadable('Makefile')
