@@ -132,13 +132,6 @@ map <F10> :!./%< <CR>
 " map F11 = F9 + F10
 map <F11> :w <CR> :make <CR> :!./%< <CR>
 
-"=== setting depends on filetype  ==="
-" au, autocommand
-autocmd FileType make,gitconfig,gitcommit,apache,dockerfile setlocal et!
-autocmd FileType gitcommit setlocal cc=50,72 | setlocal textwidth=72 | highlight ColorColumn ctermbg=cyan
-autocmd FileType html,css,javascript,yaml setlocal sw=2 ts=2
-autocmd FileType fstab setlocal sw=8 ts=8
-
 "=== manually setting filetype ==="
 " au, autocommand
 autocmd BufRead,BufNewFile *.cpp set filetype=cpp
@@ -147,6 +140,13 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile named.conf* set filetype=named
 autocmd BufRead,BufNewFile *.pac set filetype=javascript
 autocmd BufRead,BufNewFile .php_cs,.php_cs.dist set filetype=php
+
+"=== setting depends on filetype  ==="
+" au, autocommand
+autocmd FileType make,gitconfig,gitcommit,apache,dockerfile setlocal et!
+autocmd FileType gitcommit setlocal cc=50,72 | setlocal textwidth=72 | highlight ColorColumn ctermbg=cyan
+autocmd FileType html,css,javascript,yaml setlocal sw=2 ts=2
+autocmd FileType fstab setlocal sw=8 ts=8
 
 " set makeprg(depends on filetype) if makefile is not exist
 if !filereadable('makefile') && !filereadable('Makefile')
