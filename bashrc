@@ -14,7 +14,7 @@ HISTSIZE=1000
 
 PROMPT_DIRTRIM=5
 
-export PATH="~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
+export PATH="~/bin:~/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 
 #set default charset and language
 locale=en_US.UTF-8
