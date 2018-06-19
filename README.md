@@ -1,7 +1,3 @@
-This is a beta verion
-=====================
-no dangerous and harm, but it's not complete!
-
 Unitial
 =======
 Automatic initialize environment for Unix-like operating system!
@@ -9,24 +5,20 @@ Automatic initialize environment for Unix-like operating system!
 
 Introduction
 ============
-I hope to make a script to initialize the environment for friendly use in Unix-like OS,
+A set of scripts and configs to initialize the environment for Unix-like OS,
 
-Currently, I can only aim(and test) at FreeBSD and most Linux distros.
-(Originally, I do this for myself only, but I think I can share it to other people, so I upload it to github!)
+Not fully tested but should work on FreeBSD, most of Linux distros and macOS.
 
-If you are interesting in the very small project, welcome to fork and feedback, or join it!
+Feel free to fork, send pull request and feedback, but do not erase author info please.
 
-Any question and suggestion, please let me know, thanks.
+Questions and suggestions are welcome.
 
 
 Requirement
 ===========
-If you are using FreeBSD, there is no additional requirement, please just make sure your `fetch` command works fine.
+For FreeBSD, there is no additional requirements, please use the built-in `fetch` command.
 
-On other unix environment, please prepare `curl` or `wget`, so that the install script can get other files.
-
-* you can install curl and wget by apt-get, yum or homebrew, pacman, it depends on your operating system.
-
+On other unix environment, please prepare `curl` or `wget`, so that the install script can download other files properly.
 
 Installation
 ==============
@@ -34,30 +26,24 @@ Installation
 Install by this one line command if you have `curl`:
 
 ```sh
-curl -Lo- https://goo.gl/FGs2Fu | bash
+curl -Lo- https://github.com/PeterDaveHello/Unitial/raw/master/setup.sh | bash
 ```
 
 If you don't have `curl` but your have `wget`:
 ```sh
-wget  -O- https://goo.gl/FGs2Fu | bash
+wget  -O- https://github.com/PeterDaveHello/Unitial/raw/master/setup.sh | bash
 ```
 
 If you are using FreeBSD without both `wget` and `curl`, try:
 ```sh
-fetch -o- https://goo.gl/FGs2Fu | bash
+fetch -o- https://github.com/PeterDaveHello/Unitial/raw/master/setup.sh | bash
 ```
 
-And all works will be done in seconds.
+(You can replace the url with a shorter one: https://goo.gl/FGs2Fu)
+
+All the works will be done in seconds.
 
 If you know how to use git and already installed it, you can also clone this repo, but there is no need.
-
-I hope it can be used very easy! And if you got git on your machine, maybe you already initialized it by yourself:)
-
-This is design for whom? and for what?
-======================================
-Originally, this is used for myself only, I hate to configure in a new environment everytime!
-
-I think that maybe I can share it to someone else, so I did some modify and upload on github! 
 
 
 What's in it?
@@ -80,12 +66,13 @@ connection info for oftc and freenode, channel config example
 tmux:
 Useful status bar including avg load, color adjusment
 
-w3m:
-color adjusment
-
-Notes
-=====
-Currently, I only test on "lastest" FreeBSD and most Linux distros, if it's not work, please tell me to fix.
+others:
+  - aria2c
+  - wget
+  - curl
+  - tig
+  - w3m
+  - php_cs
 
 Author
 ======
