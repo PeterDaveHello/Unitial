@@ -14,7 +14,7 @@ HISTSIZE=1000
 
 PROMPT_DIRTRIM=5
 
-export PATH="~/bin:~/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
+export PATH="$HOME/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 
 #set default charset and language
 locale=en_US.UTF-8
@@ -26,7 +26,8 @@ export LC_ALL=$locale
 export EDITOR=vim
 
 #GPG passphrase input workaround
-export GPG_TTY=$(tty)
+export GPG_TTY
+PG_TTY=$(tty)
 
 #tmux color issue
 alias tmux='\tmux -2'
@@ -36,7 +37,7 @@ alias uniq='LC_ALL=C uniq'
 
 # some setting which depends on OS
 os=$(uname)
-if [ $os = "FreeBSD" ] || [ $os = "Darwin" ]; then
+if [ "$os" = "FreeBSD" ] || [ "$os" = "Darwin" ]; then
   datetime='date +%m/%d@%H:%M:%S'
   alias ls='\ls -F'
   alias free='\freecolor -tm'
@@ -72,10 +73,10 @@ alias ssh='ssh -v'
 #cd
 alias cd..='\cd ..'
 alias cd...='\cd ../..'
-alias ..="\cd .."
-alias ...="\cd ../.."
-alias ....="\cd ../../.."
-alias .....="\cd ../../../.."
+alias ..='\cd ..'
+alias ...='\cd ../..'
+alias ....='\cd ../../..'
+alias .....='\cd ../../../..'
 
 #other alias
 alias c='clear'
@@ -92,13 +93,13 @@ alias optipng='\optipng -o7 -zm1-9 -preserve'
 
 if [ -e ~/.bash_history ]; then
   # network-related commands or tools which need auto completion
-  complete -W "$(echo $(grep '^ssh ' ~/.bash_history | sort -u | sed 's/^ssh //'))" ssh
-  complete -W "$(echo $(grep '^sftp ' ~/.bash_history | sort -u | sed 's/^sftp //'))" sftp
-  complete -W "$(echo $(grep '^ping ' ~/.bash_history | sort -u | sed 's/^ping //'))" ping
-  complete -W "$(echo $(grep '^dig ' ~/.bash_history | sort -u | sed 's/^dig //'))" dig
-  complete -W "$(echo $(grep '^telnet ' ~/.bash_history | sort -u | sed 's/^telnet //'))" telnet
-  complete -W "$(echo $(grep '^mosh ' ~/.bash_history | sort -u | sed 's/^mosh //'))" mosh
-  complete -W "$(echo $(grep '^xfreerdp ' ~/.bash_history | sort -u | sed 's/^xfreerdp //'))" xfreerdp
+  complete -W "$(grep '^ssh ' ~/.bash_history | sort -u | sed 's/^ssh //')" ssh
+  complete -W "$(grep '^sftp ' ~/.bash_history | sort -u | sed 's/^sftp //')" sftp
+  complete -W "$(grep '^ping ' ~/.bash_history | sort -u | sed 's/^ping //')" ping
+  complete -W "$(grep '^dig ' ~/.bash_history | sort -u | sed 's/^dig //')" dig
+  complete -W "$(grep '^telnet ' ~/.bash_history | sort -u | sed 's/^telnet //')" telnet
+  complete -W "$(grep '^mosh ' ~/.bash_history | sort -u | sed 's/^mosh //')" mosh
+  complete -W "$(grep '^xfreerdp ' ~/.bash_history | sort -u | sed 's/^xfreerdp //')" xfreerdp
 fi
 
 #git auto completion
@@ -109,7 +110,7 @@ fi
 function repeat() {
   i=$1
   shift
-  for n in $(seq $i); do
+  for n in $(seq "$i"); do
     $@
   done
 }
