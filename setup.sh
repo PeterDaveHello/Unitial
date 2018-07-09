@@ -29,7 +29,7 @@ fi
 ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working environment\n\nPlease wait...\n\n\e[0m"
 
 ${ECHO} -e "\n\e[1;36;40mDownload and setup configs from server...\n\e[0m"
-for file in gitconfig tcshrc bashrc bash_profile inputrc vimrc zshrc gitignore_global tmux.conf w3mconfig xinputrc wgetrc curlrc tigrc editorconfig php_cs; do
+for file in gitconfig tcshrc bashrc bash_profile inputrc vimrc zshrc gitignore_global tmux.conf w3mconfig xinputrc wgetrc curlrc tigrc editorconfig php_cs markdownlintrc; do
   ${download_o} - "${github_base}${repo_path}${file}" | ${CAT} >>~/."$file" &
 done
 

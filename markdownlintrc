@@ -1,0 +1,9 @@
+{
+  "default": true,
+  "line-length": false,
+  "no-bare-urls": false,
+  "ul-start-left": false,
+  "no-hard-tabs": true,
+  "no-trailing-spaces": { "br_spaces": 0 }
+}
+
