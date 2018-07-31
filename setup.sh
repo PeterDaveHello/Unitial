@@ -17,9 +17,9 @@ if [ "$os" = "FreeBSD" ]; then
 else
   ECHO="/bin/echo"
   ${ECHO} -e "\n\e[1;36;40mYour operating system is $os\n\e[0m"
-  if type "curl" >/dev/null 2>&1; then
+  if type "curl" > /dev/null 2>&1; then
     download_o='curl --compressed -#o'
-  elif type "wget" >/dev/null 2>&1; then
+  elif type "wget" > /dev/null 2>&1; then
     download_o='wget --no-timestamping --no-verbose -O '
   else
     echo "Unitial needs 'wget' or 'curl' to download the assets." 1>&2
@@ -30,7 +30,7 @@ ${ECHO} -e "\n\e[1;36;40mUnitial is started to initial your Unix-like working en
 
 ${ECHO} -e "\n\e[1;36;40mDownload and setup configs from server...\n\e[0m"
 for file in gitconfig tcshrc bashrc bash_profile inputrc vimrc zshrc gitignore_global tmux.conf w3mconfig xinputrc wgetrc curlrc tigrc editorconfig php_cs markdownlintrc; do
-  ${download_o} - "${github_base}${repo_path}${file}" | ${CAT} >>~/."$file" &
+  ${download_o} - "${github_base}${repo_path}${file}" | ${CAT} >> ~/."$file" &
 done
 
 ${MKDIR} -p ~/.irssi/ ~/.git/contrib/ ~/.vim/colors/ ~/.vim/swp/ ~/.vim/bak/ ~/.vim/undo/ ~/.aria2/
@@ -45,7 +45,7 @@ ${download_o} ~/.gcin/gtab.list "${github_base}${repo_path}gtab.list" &
 
 ${MKDIR} -p -m 700 ~/.ssh/.tmp_session/
 ${CHMOD} 700 ~/.ssh/
-${download_o} - "${github_base}${repo_path}ssh_config" | ${CAT} >>~/.ssh/config &
+${download_o} - "${github_base}${repo_path}ssh_config" | ${CAT} >> ~/.ssh/config &
 ${TOUCH} ~/.ssh/authorized_keys
 ${CHMOD} 600 ~/.ssh/config ~/.ssh/authorized_keys
 
@@ -53,18 +53,18 @@ wait
 
 ${ECHO} -e "\n\e[1;36;40mAdd some color setting which depends on your OS...\n\e[0m"
 if [ "$os" = "FreeBSD" ] || [ "$os" = "Darwin" ]; then
-  ${ECHO} -e "\n#color setting\nalias ls='\ls -F'" >>~/.zshrc
-  ${ECHO} -e "\n#color setting\nalias ls '\ls -F'" >>~/.tcshrc
+  ${ECHO} -e "\n#color setting\nalias ls='\ls -F'" >> ~/.zshrc
+  ${ECHO} -e "\n#color setting\nalias ls '\ls -F'" >> ~/.tcshrc
 else
-  ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >>~/.zshrc
-  ${ECHO} -e "\n#color setting\nalias ls '\ls -F --color=auto'" >>~/.tcshrc
+  ${ECHO} -e "\n#color setting\nalias ls='\ls -F --color=auto'" >> ~/.zshrc
+  ${ECHO} -e "\n#color setting\nalias ls '\ls -F --color=auto'" >> ~/.tcshrc
 fi
 
 if [ "$os" = "FreeBSD" ]; then
   ${ECHO} -e "\n\e[1;36;40mAdd FreeBSD's package mirror setting...\n\e[0m"
-  ${ECHO} -e "\n#package mirror setting\nexport PACKAGEROOT=http://ftp.tw.freebsd.org" >>~/.bashrc
-  ${ECHO} -e "\n#package mirror setting\nexport PACKAGEROOT=http://ftp.tw.freebsd.org" >>~/.zshrc
-  ${ECHO} -e "\n#package mirror setting\nsetenv PACKAGEROOT http://ftp.tw.freebsd.org" >>~/.tcshrc
+  ${ECHO} -e "\n#package mirror setting\nexport PACKAGEROOT=http://ftp.tw.freebsd.org" >> ~/.bashrc
+  ${ECHO} -e "\n#package mirror setting\nexport PACKAGEROOT=http://ftp.tw.freebsd.org" >> ~/.zshrc
+  ${ECHO} -e "\n#package mirror setting\nsetenv PACKAGEROOT http://ftp.tw.freebsd.org" >> ~/.tcshrc
 fi
 
 ${ECHO} -e "\n\e[1;36;40mDownload VIM color scheme - Kolor from server...\n\e[0m"
@@ -81,8 +81,8 @@ wait
 
 if [ "$os" = "FreeBSD" ] && [ -r /usr/local/share/certs/ca-root-nss.crt ]; then
   ${ECHO} -e "\n\e[1;36;40mAdd ca-certificate path for FreeBSD's wget & aria2...\n\e[0m"
-  ${ECHO} -e "\nca-certificate=/usr/local/share/certs/ca-root-nss.crt" >>~/.wgetrc
-  ${ECHO} -e "\nca-certificate=/usr/local/share/certs/ca-root-nss.crt" >>~/.aria2/aria2.conf
+  ${ECHO} -e "\nca-certificate=/usr/local/share/certs/ca-root-nss.crt" >> ~/.wgetrc
+  ${ECHO} -e "\nca-certificate=/usr/local/share/certs/ca-root-nss.crt" >> ~/.aria2/aria2.conf
 fi
 
 ${ECHO} -e "\n\e[1;36;40mUnitial installation was finished!\n\nPlease terminate all other works and restart your shell or re-login.\n\e[0m"
