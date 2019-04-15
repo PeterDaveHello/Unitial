@@ -67,12 +67,18 @@ if [ "$os" = "FreeBSD" ]; then
   ${ECHO} -e "\n#package mirror setting\nsetenv PACKAGEROOT http://ftp.tw.freebsd.org" >> ~/.tcshrc
 fi
 
+if command -v git; then
+  git_version="v$(git --version | awk '{print $3}')"
+else
+  git_version="master"
+fi
+
 ${ECHO} -e "\n\e[1;36;40mDownload VIM color scheme - Kolor from server...\n\e[0m"
 ${download_o} ~/.vim/colors/kolor.vim "${github_base}zeis/vim-kolor/master/colors/kolor.vim" &
 ${ECHO} -e "\n\e[1;36;40mDownload git contrib - diff-highlight from server...\n\e[0m"
 ${download_o} ~/.git/contrib/diff-highlight "${github_base}git/git/v2.13.2/contrib/diff-highlight/diff-highlight" && ${CHMOD} +x ~/.git/contrib/diff-highlight &
 ${ECHO} -e "\n\e[1;36;40mDownload git's auto completion configs from server...\n\e[0m"
-git_auto_complete_path="${github_base}git/git/master/contrib/completion/git-completion."
+git_auto_complete_path="${github_base}git/git/${git_version}/contrib/completion/git-completion."
 ${download_o} ~/.git-completion.bash "${git_auto_complete_path}bash" &
 ${download_o} ~/.git-completion.tcsh "${git_auto_complete_path}tcsh" &
 ${download_o} ~/.git-completion.zsh "${git_auto_complete_path}zsh" &
