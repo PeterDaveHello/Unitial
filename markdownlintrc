@@ -4,6 +4,9 @@
   "no-bare-urls": false,
   "ul-start-left": false,
   "no-hard-tabs": true,
+  "no-bare-urls": false,
+  "no-inline-html": false,
+  "commands-show-output": false,
   "no-trailing-spaces": { "br_spaces": 0 }
 }
 
