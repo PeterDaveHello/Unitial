@@ -27,3 +27,6 @@ Host do.not.use.multiplexing
 Host for.x11.forwarding
     ForwardX11 yes
     ForwardX11Trusted yes
+
+Host internal
+    ProxyCommand ssh jumphost.internal -W %h:%p
