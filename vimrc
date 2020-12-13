@@ -140,6 +140,7 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile named.conf* set filetype=named
 autocmd BufRead,BufNewFile *.pac set filetype=javascript
 autocmd BufRead,BufNewFile .php_cs,.php_cs.dist set filetype=php
+autocmd BufRead,BufNewFile Dockerfile* set filetype=dockerfile
 
 "=== setting depends on filetype  ==="
 " au, autocommand
