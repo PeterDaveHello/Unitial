@@ -16,6 +16,7 @@
 	cims = commit -m -S
 	cl = clone
 	cl1 = clone --depth 1
+	cl10 = clone --depth 10
 	co = checkout
 	cob = checkout -b
 	df = diff
