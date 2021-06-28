@@ -39,7 +39,7 @@ If you are using FreeBSD without both `wget` and `curl`, try:
 fetch -o- https://github.com/PeterDaveHello/Unitial/raw/master/setup.sh | bash
 ```
 
-(You can replace the url with a shorter one: https://goo.gl/FGs2Fu)
+(You can replace the url with a shorter one: https://git.io/Unitial)
 
 All the works will be done in seconds.
 
