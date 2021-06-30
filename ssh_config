@@ -30,3 +30,6 @@ Host for.x11.forwarding
 
 Host internal
     ProxyCommand ssh jumphost.internal -W %h:%p
+
+Host internal2
+    ProxyJump jumphost.internal # OpenSSH v7.3+ shortcut
