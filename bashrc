@@ -109,7 +109,7 @@ if [ -e ~/.git-completion.bash ]; then
 fi
 
 function repeat() {
-  i=$1
+  local i=$1
   shift
   for n in $(seq "$i"); do
     $@
