@@ -116,6 +116,14 @@ function repeat() {
   done
 }
 
+function retry() {
+  local i=$1
+  shift
+  for n in $(seq "$i"); do
+    $@ && break
+  done
+}
+
 function man() {
   env LESS_TERMCAP_mb=$'\E[01;31m' \
     LESS_TERMCAP_md=$'\E[01;38;5;74m' \
