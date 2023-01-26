@@ -53,6 +53,9 @@ set lazyredraw "lz
 " enable window title
 set title
 
+" Increase the max tab pages to be opened
+set tabpagemax=30 "tpm
+
 " set windows title back to path instead of default 'Thanks for Flying Vim'
 let &titleold=getcwd()
 
