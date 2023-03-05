@@ -149,7 +149,7 @@ autocmd BufRead,BufNewFile Dockerfile* set filetype=dockerfile
 " au, autocommand
 autocmd FileType make,gitconfig,gitcommit,apache,dockerfile,go setlocal et!
 autocmd FileType gitcommit setlocal cc=50,72 | setlocal textwidth=72 | highlight ColorColumn ctermbg=cyan
-autocmd FileType html,css,javascript,yaml,json setlocal sw=2 ts=2
+autocmd FileType html,css,javascript,yaml,json,typescript setlocal sw=2 ts=2
 autocmd FileType fstab setlocal sw=8 ts=8
 
 " set makeprg(depends on filetype) if makefile is not exist
