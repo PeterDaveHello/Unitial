@@ -76,6 +76,7 @@
 	autocrlf = false
 	ignorecase = false
 	fscache = true
+	quotepath = false
 [mergetool]
 	keepBackup = false
 [gui]
