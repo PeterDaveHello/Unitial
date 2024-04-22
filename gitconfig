@@ -31,7 +31,7 @@
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbi = rebase -i
-	rbm = "!fn(){ if git show-ref --verify --quiet refs/heads/master; then git rebase master; elif git show-ref --verify --quiet refs/heads/main; then git rebase main; else echo 'Both master and main branch not found!' >&2; return 1; fi; };fn"
+	rbm = "!fn(){ branch=''; if git show-ref --verify --quiet refs/heads/master; then branch='master'; elif git show-ref --verify --quiet refs/heads/main; then branch='main'; fi; if [ -n '$branch' ]; then git rebase $branch $1; else echo 'Both master and main branch not found!' >&2; return 1; fi; };fn"
 	rmt = remote
 	rmtv = remote -v
 	rmta = remote add
