@@ -69,7 +69,7 @@ if [ "$os" = "FreeBSD" ]; then
 fi
 
 if command -v git; then
-  git_version="v$(git --version | awk '{print $3}')"
+  git_version="v$(git --version | awk '{gsub(/\.windows.+/, "", $0); print $3}')"
 else
   git_version="master"
 fi
