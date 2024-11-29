@@ -1,0 +1,16 @@
+---
+failure-threshold: warning
+ignored:
+  - DL3008 # apt pin version warning
+  - DL3013 # pip pin version warning
+  - DL3016 # npm pin version warning
+  - DL3018 # apk pin version warning
+  - DL3028 # gem pin version warning
+  - DL3033 # yum pin version warning
+  - DL3041 # dnf pin version warning
+override:
+  warning:
+    - DL3009 # apt-get lists clean up
+    - DL3015 # Avoid additional apt packages
+    - DL3019 # apk auto index update and clean up
+    - DL3060 # yarn cache cleanup
