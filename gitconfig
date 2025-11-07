@@ -31,7 +31,7 @@
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbi = rebase -i
-	rbm = "!fn(){ branch=''; if git show-ref --verify --quiet refs/heads/master; then branch='master'; elif git show-ref --verify --quiet refs/heads/main; then branch='main'; fi; if [ -n '$branch' ]; then git rebase $branch $1; else echo 'Both master and main branch not found!' >&2; return 1; fi; };fn"
+	rbm = "!fn(){ base=''; remote_head=$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null || true); remote_branch=${remote_head#origin/}; if [ -n \"$remote_branch\" ] && [ \"$remote_branch\" != \"$remote_head\" ]; then case \"$remote_branch\" in master|main) if git show-ref --verify --quiet \"refs/heads/$remote_branch\"; then base=$remote_branch; elif git show-ref --verify --quiet \"refs/remotes/origin/$remote_branch\"; then base=origin/$remote_branch; fi;; esac; fi; if [ -z \"$base\" ] && git show-ref --verify --quiet refs/heads/master; then base=master; elif [ -z \"$base\" ] && git show-ref --verify --quiet refs/heads/main; then base=main; fi; if [ -z \"$base\" ] && [ -n \"$remote_branch\" ]; then if git show-ref --verify --quiet \"refs/heads/$remote_branch\"; then base=$remote_branch; elif [ -n \"$remote_head\" ] && git show-ref --verify --quiet \"refs/remotes/$remote_head\"; then base=$remote_head; fi; fi; if [ -z \"$base\" ]; then echo 'Both master and main branch not found!' >&2; return 1; fi; git rebase \"$base\" \"$@\"; };fn"
 	rmt = remote
 	rmtv = remote -v
 	rmta = remote add
