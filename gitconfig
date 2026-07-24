@@ -67,7 +67,8 @@
 	cleanup = "!fn(){ for a in `git remote`; do git remote prune $a; done && git reflog expire --verbose --all --expire=now && git gc --prune=now --aggressive ;};fn"
 [push]
 	# for only push to current branch
-	default = tracking
+	default = simple
+	autosetupremote = true
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
@@ -93,6 +94,7 @@
 [branch "dev"]
 	rebase = true
 [branch]
+	autosetupmerge = simple
 	autosetuprebase = always
 	sort = -committerdate
 [url "git@github.com:"]
